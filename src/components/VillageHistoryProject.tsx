@@ -2,13 +2,14 @@
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 const villageData = [
   {
     id: 1,
     name: "岔道古城",
     period: "辽金时期",
-    image: "https://placeholder.pics/svg/400x300/DEDEDE/555555/岔道古城",
+    image: "/lovable-uploads/3b6826c4-ff45-46e8-8849-4d5c4e491990.png",
     description: "位于延庆西北部，是辽金时期重要军事要塞，出土陶瓷、兵器等文物，见证了延庆的边疆历史。",
     coordinates: [115.9342, 40.5531],
     discoveryDate: "2023-07-15"
@@ -52,9 +53,22 @@ const timelineEvents = [
   { date: "2024年5月", title: "手册出版", description: "《延庆村落历史记忆》手册出版" }
 ];
 
+const treasureImages = [
+  {
+    src: "/lovable-uploads/3b6826c4-ff45-46e8-8849-4d5c4e491990.png",
+    alt: "延庆古城墙遗址",
+    caption: "延庆古城墙遗址"
+  },
+  {
+    src: "/lovable-uploads/e38bff2f-1797-42bc-b548-660ecf1945c6.png",
+    alt: "延庆历史文献资料",
+    caption: "延庆历史文献资料"
+  }
+];
+
 const VillageHistoryProject = () => {
   const [open, setOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("map");
+  const [activeTab, setActiveTab] = useState("overview");
   const [selectedLocation, setSelectedLocation] = useState<number | null>(null);
   
   // In a real implementation, we would use an actual mapping library like Mapbox or GoogleMaps
@@ -67,17 +81,81 @@ const VillageHistoryProject = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl">"寻找村落中的历史记忆"文物古迹集</DialogTitle>
-            <DialogDescription>
+            <div className="text-center mb-4">
+              <img 
+                src="/lovable-uploads/f8eeaba7-86e0-4f7c-a612-54e126ccd16b.png" 
+                alt="寻找村落中的历史记忆" 
+                className="h-16 mx-auto mb-2"
+              />
+            </div>
+            <DialogTitle className="text-2xl text-center">寻找村落中的历史记忆</DialogTitle>
+            <DialogDescription className="text-center">
               延庆区选调生团队通过实地调研，记录并保护村落历史文化遗产
             </DialogDescription>
           </DialogHeader>
           
-          <Tabs defaultValue="map" value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid grid-cols-2 w-full mb-6">
-              <TabsTrigger value="map">地图导览</TabsTrigger>
+          <Tabs defaultValue="overview" value={activeTab} onValueChange={setActiveTab} className="w-full mt-4">
+            <TabsList className="grid grid-cols-3 w-full mb-6">
+              <TabsTrigger value="overview">项目概述</TabsTrigger>
+              <TabsTrigger value="map">文物地图</TabsTrigger>
               <TabsTrigger value="timeline">项目时间线</TabsTrigger>
             </TabsList>
+            
+            <TabsContent value="overview" className="p-1 space-y-6">
+              <div className="prose max-w-none">
+                <div className="bg-amber-50 p-6 rounded-lg mb-6 border border-amber-200">
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-3">项目背景与意义</h3>
+                  <p className="text-gray-700">
+                    延庆区拥有丰富的历史文化遗产，但由于城市化进程加快，许多村落中的历史文物和集体记忆正在逐渐消失。
+                    选调生团队发起"寻找村落中的历史记忆"项目，旨在通过系统性调研，记录、保护并传承延庆区珍贵的历史文化资源。
+                  </p>
+                </div>
+                
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目成果展示</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    {treasureImages.map((img, idx) => (
+                      <div key={idx} className="overflow-hidden rounded-lg shadow-md">
+                        <img src={img.src} alt={img.alt} className="w-full h-auto" />
+                        <p className="p-3 text-center text-sm text-gray-700 bg-gray-50">{img.caption}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目进展现状</h3>
+                  <p className="text-gray-700 mb-4">
+                    现在已经收集延庆镇、永宁镇、康庄镇、张山营镇、刘斌堡乡<span className="text-red-500 font-bold">5个乡镇23处历史遗迹的基础材料</span>。
+                    通过走访延庆17个乡镇，已记录发现文物古迹45处，收集口述历史127段，为保护延庆区历史文化遗产做出重要贡献。
+                  </p>
+                  <div className="mt-6">
+                    <div className="flex flex-wrap gap-3">
+                      <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">#文化保护</span>
+                      <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">#历史调研</span>
+                      <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">#乡村记忆</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目成果运用</h3>
+                  <div className="p-4 border rounded-lg">
+                    <p className="text-gray-700">
+                      选调生团队编纂出版《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。
+                      同时，通过建立延庆区文物古迹数字档案，为未来的文化遗产保护和文旅产业发展提供了数据支持。
+                    </p>
+                    <div className="mt-4 flex justify-center">
+                      <img
+                        src="/lovable-uploads/e38bff2f-1797-42bc-b548-660ecf1945c6.png"
+                        alt="《延庆村落历史记忆》手册"
+                        className="h-40 rounded-md shadow-md"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
             
             <TabsContent value="map" className="p-1 space-y-6">
               <div className="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden">
@@ -220,7 +298,7 @@ const VillageHistoryProject = () => {
           <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow order-1 md:order-2">
             <div className="aspect-[4/3]">
               <img 
-                src="https://placeholder.pics/svg/400x300/DEDEDE/555555/文物古迹地图" 
+                src="/lovable-uploads/03bd8dd8-b2fb-4c4e-b5dc-d98e5d59055e.png"
                 alt="延庆文物古迹地图"
                 className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
               />
