@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -85,6 +85,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -94,16 +95,13 @@
 
 @layer components {
   .banner-bg {
+    @apply relative bg-cover bg-center bg-no-repeat;
     background-image: url('/images/yanqing-bg.png');
-    background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-    position: relative;
   }
   
   .banner-overlay {
-    position: absolute;
-    inset: 0;
+    @apply absolute inset-0;
     background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
   }
 
@@ -116,7 +114,19 @@
   }
 
   .project-card-image {
-    @apply w-full h-48 object-cover transition-all duration-500 hover:scale-105;
+    @apply w-full h-48 object-cover transition-all duration-500;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.25);
   }
 
   .animate-float {
@@ -141,6 +151,15 @@
   
   .animate-pulse-slow {
     animation: pulse 3s infinite;
+  }
+  
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    @apply absolute top-0 left-0 h-full w-[200%] bg-shimmer-gradient bg-[length:200%_100%] animate-shimmer;
   }
 }
 
@@ -211,7 +230,7 @@
 }
 
 .font-sans {
-  font-family: 'Source Sans Pro', 'Microsoft YaHei', system-ui, sans-serif;
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

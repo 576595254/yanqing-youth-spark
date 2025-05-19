@@ -88,14 +88,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' },
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'shimmer': 'shimmer 3s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 12s linear infinite',
+				'fade-in-up': 'fade-in-up 0.5s ease-out'
 			},
 			backgroundImage: {
 				'banner-pattern': "url('/images/yanqing-bg.png')",
+				'banner-gradient': 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6))',
+				'card-gradient': 'linear-gradient(to bottom right, rgba(0,128,102,0.05), rgba(255,165,0,0.05))',
+				'shimmer-gradient': 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.2) 20%, transparent 40%)',
 			}
 		}
 	},
