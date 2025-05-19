@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowRight } from 'lucide-react';
 
 const redBookPosts = [
   {
@@ -192,9 +192,7 @@ const RedBookProject = () => {
             </div>
             <div className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform">
               <span>查看详情</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ArrowRight className="h-5 w-5 ml-2" />
             </div>
           </div>
           

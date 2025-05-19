@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import StatsSidebar from '@/components/StatsSidebar';
 import ProjectManagement from '@/components/ProjectManagement';
+import ManagementSystem from '@/components/ManagementSystem';
 
 const Index = () => {
   useEffect(() => {
@@ -36,13 +37,7 @@ const Index = () => {
       
       <main>
         <ProjectManagement />
-        
-        <section id="management" className="py-20 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-16">管理制度</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示延庆区选调生团队管理制度、考核办法等内容，以电子手册形式呈现。</p>
-          </div>
-        </section>
+        <ManagementSystem />
         
         <section id="resources" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
