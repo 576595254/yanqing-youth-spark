@@ -1,32 +1,26 @@
-
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
-
 const Banner = () => {
   const [loaded, setLoaded] = useState(false);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 300);
-
     return () => clearTimeout(timer);
   }, []);
-
   const scrollToProjects = () => {
     const projectsSection = document.querySelector('#projects');
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      projectsSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="relative h-screen w-full overflow-hidden">
+  return <div className="relative h-screen w-full overflow-hidden">
       {/* Banner background with Great Wall landscape */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: "url('/lovable-uploads/bc603a8a-62e3-46bc-a789-36aa31aee13b.png')" }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{
+      backgroundImage: "url('/lovable-uploads/bc603a8a-62e3-46bc-a789-36aa31aee13b.png')"
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60"></div>
       </div>
       
@@ -49,11 +43,8 @@ const Banner = () => {
           </p>
           
           <div className="flex justify-center space-x-4">
-            <button
-              onClick={scrollToProjects}
-              className="group bg-amber-400 hover:bg-amber-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3"
-            >
-              <span>探索项目化管理亮点</span>
+            <button onClick={scrollToProjects} className="group bg-amber-400 hover:bg-amber-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl flex items-center space-x-3">
+              <span className="py-0 text-xl">探索项目化管理亮点</span>
               <ArrowDown className="w-5 h-5 group-hover:animate-bounce" />
             </button>
           </div>
@@ -65,8 +56,6 @@ const Banner = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
-    </div>
-  );
+    </div>;
 };
-
 export default Banner;
