@@ -424,7 +424,7 @@ const RedBookProject = () => {
         </DialogContent>
       </Dialog>
       
-      <div className="cursor-pointer group">
+      <div className="cursor-pointer group mx-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2 px-0 mx-[24px]">
             <h3 className="font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors text-3xl py-[17px]">
