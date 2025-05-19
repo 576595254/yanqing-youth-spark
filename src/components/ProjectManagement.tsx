@@ -17,7 +17,7 @@ const ProjectManagement = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-4">
-            项目化管理 <span className="text-activeOrange">成果展示</span>
+            项目化管理 <span className="text-amber-400">成果展示</span>
           </h2>
           
           <p className="text-gray-600">

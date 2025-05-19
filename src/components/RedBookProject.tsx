@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -47,9 +48,9 @@ const RedBookProject = () => {
   const [activeTab, setActiveTab] = useState("posts");
   
   const stats = {
-    followers: 18750,
+    followers: 18000,
     posts: 87,
-    monthlyViews: 138500,
+    monthlyViews: 100000,
     interaction: 4.8
   };
   
@@ -59,8 +60,12 @@ const RedBookProject = () => {
     { month: '3月', followers: 14800 },
     { month: '4月', followers: 16300 },
     { month: '5月', followers: 17600 },
-    { month: '6月', followers: 18750 }
+    { month: '6月', followers: 18000 }
   ];
+
+  const handleDetailClick = () => {
+    setOpen(true);
+  };
 
   return (
     <>
@@ -72,6 +77,12 @@ const RedBookProject = () => {
               延庆区选调生团队运营的官方社交媒体平台，分享延庆风土人情及选调生基层工作
             </DialogDescription>
           </DialogHeader>
+          
+          <div className="mb-6">
+            <p className="text-gray-700">
+              "小选和她的朋友们"小红书账号开创的起因、经过、成果。通过优质的笔记展示延庆风土人情和选调生工作，打造延庆特色生活内容IP，是展示选调生工作和延庆生活的重要窗口。
+            </p>
+          </div>
           
           <Tabs defaultValue="posts" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid grid-cols-2 w-full mb-6">
@@ -114,7 +125,7 @@ const RedBookProject = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white rounded-lg p-4 shadow-sm text-center">
                   <h4 className="text-sm text-gray-500">粉丝数</h4>
-                  <p className="text-2xl font-bold text-yanqingGreen">{stats.followers}</p>
+                  <p className="text-2xl font-bold text-yanqingGreen">{stats.followers}+</p>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm text-center">
                   <h4 className="text-sm text-gray-500">笔记数</h4>
@@ -122,7 +133,7 @@ const RedBookProject = () => {
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm text-center">
                   <h4 className="text-sm text-gray-500">月浏览量</h4>
-                  <p className="text-2xl font-bold text-yanqingGreen">{stats.monthlyViews}</p>
+                  <p className="text-2xl font-bold text-yanqingGreen">{stats.monthlyViews}+</p>
                 </div>
                 <div className="bg-white rounded-lg p-4 shadow-sm text-center">
                   <h4 className="text-sm text-gray-500">互动率 (%)</h4>
@@ -170,7 +181,7 @@ const RedBookProject = () => {
         </DialogContent>
       </Dialog>
       
-      <div className="cursor-pointer group" onClick={() => setOpen(true)}>
+      <div className="cursor-pointer group">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors">
@@ -190,10 +201,13 @@ const RedBookProject = () => {
                 #延庆宣传
               </span>
             </div>
-            <div className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform">
+            <button
+              onClick={handleDetailClick}
+              className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform"
+            >
               <span>查看详情</span>
               <ArrowRight className="h-5 w-5 ml-2" />
-            </div>
+            </button>
           </div>
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
