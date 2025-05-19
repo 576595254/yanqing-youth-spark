@@ -1,93 +1,171 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award } from 'lucide-react';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
-
-const redBookPosts = [
-  {
-    id: 1,
-    title: "探访延庆世园会遗址公园",
-    image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书1",
-    likes: 328,
-    comments: 42,
-    views: 12580,
-    tags: ["延庆风光", "世园会", "旅游推荐"]
-  },
-  {
-    id: 2,
-    title: "零用工平台入户调研实录",
-    image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书2",
-    likes: 256,
-    comments: 37,
-    views: 9650,
-    tags: ["乡村振兴", "零用工", "基层工作"]
-  },
-  {
-    id: 3,
-    title: "延庆非遗面人技艺传承人专访",
-    image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书3",
-    likes: 412,
-    comments: 67,
-    views: 15320,
-    tags: ["非物质文化遗产", "传统技艺", "延庆文化"]
-  },
-  {
-    id: 4,
-    title: "北京延庆夜市合集",
-    image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/夜市合集",
-    likes: 486,
-    comments: 57,
-    views: 18720,
-    tags: ["延庆美食", "夜市", "美食攻略"]
-  },
-];
-
-const contentPlanData = [
-  { seq: 1, period: "7月上旬", format: "图文", theme: "夜市合集（一）", keywords: "四海夜市、刘建堡夜市、康庄夜市等", executor: "李翊", team: "一组" },
-  { seq: 2, period: "7月下旬", format: "图文", theme: "夜市合集（二）", keywords: "司家营夜市、恒王、延陵等", executor: "段非凡", team: "二组" },
-  { seq: 3, period: "8月上旬", format: "图文", theme: "延庆区红色旅游景点", keywords: "骑行、滦河北路、雁栖铺子", executor: "黄蓉莉", team: "一组" },
-  { seq: 4, period: "8月下旬", format: "视频", theme: "恒王市场、延陵公社", keywords: "恒王市场、延陵公社", executor: "王耀正", team: "二组" },
-  { seq: 5, period: "9月上旬", format: "图文", theme: "咖啡合集（一）", keywords: "咖啡合集", executor: "罗浩", team: "一组" },
-  { seq: 6, period: "9月下旬", format: "图文", theme: "咖啡合集（二）", keywords: "咖啡合集", executor: "张文怡", team: "三组" },
-  { seq: 7, period: "10月上旬", format: "图文", theme: "秋日 晚霞 橙色", keywords: "秋日 晚霞 橙色", executor: "杨冰", team: "二组" },
-  { seq: 8, period: "10月下旬", format: "图文", theme: "稻田成熟", keywords: "稻田成熟", executor: "徐文建", team: "三组" },
-];
-
-const extendedPlanData = [
-  { seq: 9, period: "11月上旬", format: "视频", theme: "永宁古城", keywords: "永宁古城", executor: "文伟", team: "三组" },
-  { seq: 10, period: "11月下旬", format: "视频", theme: "古韵龙湾雪景", keywords: "古韵龙湾雪景", executor: "李翊", team: "一组" },
-  { seq: 11, period: "12月上旬", format: "视频", theme: "石京龙滑雪", keywords: "石京龙滑雪", executor: "段非凡", team: "二组" },
-  { seq: 12, period: "12月下旬", format: "视频", theme: "世园冰雪嘉年华", keywords: "世园冰雪嘉年华", executor: "黄蓉莉", team: "一组" },
-];
-
+const redBookPosts = [{
+  id: 1,
+  title: "探访延庆世园会遗址公园",
+  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书1",
+  likes: 328,
+  comments: 42,
+  views: 12580,
+  tags: ["延庆风光", "世园会", "旅游推荐"]
+}, {
+  id: 2,
+  title: "零用工平台入户调研实录",
+  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书2",
+  likes: 256,
+  comments: 37,
+  views: 9650,
+  tags: ["乡村振兴", "零用工", "基层工作"]
+}, {
+  id: 3,
+  title: "延庆非遗面人技艺传承人专访",
+  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书3",
+  likes: 412,
+  comments: 67,
+  views: 15320,
+  tags: ["非物质文化遗产", "传统技艺", "延庆文化"]
+}, {
+  id: 4,
+  title: "北京延庆夜市合集",
+  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/夜市合集",
+  likes: 486,
+  comments: 57,
+  views: 18720,
+  tags: ["延庆美食", "夜市", "美食攻略"]
+}];
+const contentPlanData = [{
+  seq: 1,
+  period: "7月上旬",
+  format: "图文",
+  theme: "夜市合集（一）",
+  keywords: "四海夜市、刘建堡夜市、康庄夜市等",
+  executor: "李翊",
+  team: "一组"
+}, {
+  seq: 2,
+  period: "7月下旬",
+  format: "图文",
+  theme: "夜市合集（二）",
+  keywords: "司家营夜市、恒王、延陵等",
+  executor: "段非凡",
+  team: "二组"
+}, {
+  seq: 3,
+  period: "8月上旬",
+  format: "图文",
+  theme: "延庆区红色旅游景点",
+  keywords: "骑行、滦河北路、雁栖铺子",
+  executor: "黄蓉莉",
+  team: "一组"
+}, {
+  seq: 4,
+  period: "8月下旬",
+  format: "视频",
+  theme: "恒王市场、延陵公社",
+  keywords: "恒王市场、延陵公社",
+  executor: "王耀正",
+  team: "二组"
+}, {
+  seq: 5,
+  period: "9月上旬",
+  format: "图文",
+  theme: "咖啡合集（一）",
+  keywords: "咖啡合集",
+  executor: "罗浩",
+  team: "一组"
+}, {
+  seq: 6,
+  period: "9月下旬",
+  format: "图文",
+  theme: "咖啡合集（二）",
+  keywords: "咖啡合集",
+  executor: "张文怡",
+  team: "三组"
+}, {
+  seq: 7,
+  period: "10月上旬",
+  format: "图文",
+  theme: "秋日 晚霞 橙色",
+  keywords: "秋日 晚霞 橙色",
+  executor: "杨冰",
+  team: "二组"
+}, {
+  seq: 8,
+  period: "10月下旬",
+  format: "图文",
+  theme: "稻田成熟",
+  keywords: "稻田成熟",
+  executor: "徐文建",
+  team: "三组"
+}];
+const extendedPlanData = [{
+  seq: 9,
+  period: "11月上旬",
+  format: "视频",
+  theme: "永宁古城",
+  keywords: "永宁古城",
+  executor: "文伟",
+  team: "三组"
+}, {
+  seq: 10,
+  period: "11月下旬",
+  format: "视频",
+  theme: "古韵龙湾雪景",
+  keywords: "古韵龙湾雪景",
+  executor: "李翊",
+  team: "一组"
+}, {
+  seq: 11,
+  period: "12月上旬",
+  format: "视频",
+  theme: "石京龙滑雪",
+  keywords: "石京龙滑雪",
+  executor: "段非凡",
+  team: "二组"
+}, {
+  seq: 12,
+  period: "12月下旬",
+  format: "视频",
+  theme: "世园冰雪嘉年华",
+  keywords: "世园冰雪嘉年华",
+  executor: "黄蓉莉",
+  team: "一组"
+}];
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
-  
   const stats = {
     followers: 18000,
     posts: 87,
     monthlyViews: 100000,
     interaction: 4.8
   };
-  
-  const trendData = [
-    { month: '1月', followers: 12500 },
-    { month: '2月', followers: 13200 },
-    { month: '3月', followers: 14800 },
-    { month: '4月', followers: 16300 },
-    { month: '5月', followers: 17600 },
-    { month: '6月', followers: 18000 }
-  ];
-
+  const trendData = [{
+    month: '1月',
+    followers: 12500
+  }, {
+    month: '2月',
+    followers: 13200
+  }, {
+    month: '3月',
+    followers: 14800
+  }, {
+    month: '4月',
+    followers: 16300
+  }, {
+    month: '5月',
+    followers: 17600
+  }, {
+    month: '6月',
+    followers: 18000
+  }];
   const handleDetailClick = () => {
     setOpen(true);
   };
-
-  return (
-    <>
+  return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
@@ -169,14 +247,9 @@ const RedBookProject = () => {
             
             <TabsContent value="posts" className="p-1">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {redBookPosts.map((post) => (
-                  <div key={post.id} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
+                {redBookPosts.map(post => <div key={post.id} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
                     <div className="aspect-[3/4] overflow-hidden">
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                      />
+                      <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-bold text-lg mb-2">{post.title}</h4>
@@ -186,15 +259,12 @@ const RedBookProject = () => {
                         <span className="flex items-center"><Eye className="w-4 h-4 mr-1" /> {post.views}</span>
                       </div>
                       <div className="flex flex-wrap gap-1">
-                        {post.tags.map((tag, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">
+                        {post.tags.map((tag, idx) => <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">
                             #{tag}
-                          </span>
-                        ))}
+                          </span>)}
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </TabsContent>
             
@@ -223,15 +293,13 @@ const RedBookProject = () => {
                   <h4 className="text-lg font-bold mb-4">粉丝增长趋势</h4>
                   <div className="h-60 w-full">
                     <div className="flex h-full items-end space-x-2">
-                      {trendData.map((data, idx) => (
-                        <div key={idx} className="relative flex-1 flex flex-col items-center">
-                          <div className="w-full bg-gray-200 rounded-t-sm" style={{ 
-                            height: `${(data.followers / 20000) * 100}%`,
-                            background: `linear-gradient(to top, #008066, #40a08c)` 
-                          }}></div>
+                      {trendData.map((data, idx) => <div key={idx} className="relative flex-1 flex flex-col items-center">
+                          <div className="w-full bg-gray-200 rounded-t-sm" style={{
+                        height: `${data.followers / 20000 * 100}%`,
+                        background: `linear-gradient(to top, #008066, #40a08c)`
+                      }}></div>
                           <span className="text-xs mt-1 text-gray-600">{data.month}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
                 </div>
@@ -293,8 +361,7 @@ const RedBookProject = () => {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {[...contentPlanData, ...extendedPlanData].map((item) => (
-                        <TableRow key={item.seq}>
+                      {[...contentPlanData, ...extendedPlanData].map(item => <TableRow key={item.seq}>
                           <TableCell>{item.seq}</TableCell>
                           <TableCell>{item.period}</TableCell>
                           <TableCell>{item.format}</TableCell>
@@ -304,8 +371,7 @@ const RedBookProject = () => {
                           </TableCell>
                           <TableCell>{item.executor}</TableCell>
                           <TableCell>{item.team}</TableCell>
-                        </TableRow>
-                      ))}
+                        </TableRow>)}
                     </TableBody>
                   </Table>
                 </div>
@@ -364,9 +430,7 @@ const RedBookProject = () => {
             <h3 className="text-2xl font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors">
               小红书账号"小选和她的朋友们"运营
             </h3>
-            <p className="text-gray-600 mb-4">
-              打造延庆特色生活内容IP，通过优质的笔记展示延庆风土人情和选调生工作。目前已累计18000+粉丝，月均浏览量超过10万，是展示选调生工作和延庆生活的重要窗口。
-            </p>
+            <p className="text-gray-600 mb-4">打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。目前累计阅读量超过2万，是展示选调生工作和延庆生活的重要窗口。</p>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
                 #IP运营
@@ -378,10 +442,7 @@ const RedBookProject = () => {
                 #延庆宣传
               </span>
             </div>
-            <button
-              onClick={handleDetailClick}
-              className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform"
-            >
+            <button onClick={handleDetailClick} className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform">
               <span>查看详情</span>
               <ArrowRight className="h-5 w-5 ml-2" />
             </button>
@@ -389,15 +450,9 @@ const RedBookProject = () => {
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
             <div className="grid grid-cols-2 gap-1 h-full">
-              {redBookPosts.slice(0, 4).map((post, idx) => (
-                <div key={idx} className="aspect-square overflow-hidden bg-gray-100">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                  />
-                </div>
-              ))}
+              {redBookPosts.slice(0, 4).map((post, idx) => <div key={idx} className="aspect-square overflow-hidden bg-gray-100">
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
+                </div>)}
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
               <div className="w-full p-4 text-white">
@@ -408,8 +463,6 @@ const RedBookProject = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default RedBookProject;
