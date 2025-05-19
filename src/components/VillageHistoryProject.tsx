@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -104,10 +103,9 @@ const VillageHistoryProject = () => {
             <TabsContent value="overview" className="p-1 space-y-6">
               <div className="prose max-w-none">
                 <div className="bg-amber-50 p-6 rounded-lg mb-6 border border-amber-200">
-                  <h3 className="text-xl font-bold text-yanqingGreen mb-3">项目背景与意义</h3>
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-3">在延庆的古村巷陌间，散落着无数被时光封存的文化密码 —— </h3>
                   <p className="text-gray-700">
-                    延庆区拥有丰富的历史文化遗产，但由于城市化进程加快，许多村落中的历史文物和集体记忆正在逐渐消失。
-                    选调生团队发起"寻找村落中的历史记忆"项目，旨在通过系统性调研，记录、保护并传承延庆区珍贵的历史文化资源。
+                    延庆区拥有丰富的历史文化遗产，但由于城市化进程加快，许多村落中的历史文物和集体记忆正在逐渐消失，它们沉默矗立，却鲜有人知晓其背后的千年故事。延庆区选调生团队以 "寻踪者" 的身份，发起"寻找村落中的历史记忆"项目，开启了一场跨越时空的文化对话。
                   </p>
                 </div>
                 
