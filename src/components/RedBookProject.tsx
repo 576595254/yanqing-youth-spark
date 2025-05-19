@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award } from 'lucide-react';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
+
 const redBookPosts = [{
   id: 1,
   title: "探访延庆世园会遗址公园",
@@ -134,6 +135,7 @@ const extendedPlanData = [{
   executor: "黄蓉莉",
   team: "一组"
 }];
+
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
@@ -212,7 +214,7 @@ const RedBookProject = () => {
                       团队成员分工合作，充分挖掘延庆区的文化旅游亮点，通过精心策划和制作高质量的图文和视频内容，定期更新在小红书平台上。我们采用项目化管理模式，将团队分为多个小组，每组负责不同主题的内容创作，确保内容的多样性和持续更新。
                     </p>
                     <p className="text-gray-700">
-                      在运营过程中，我们注重选题的策划和内容质量，主打真诚体验派、活力年轻化、干货生活化的风格，深入挖掘延庆本地文化和风景特色，为读者提供真实的旅游攻略和文化体验。
+                      在运营过程中，我们注重选题的策划和内容质量��主打真诚体验派、活力年轻化、干货生活化的风格，深入挖掘延庆本地文化和风景特色，为读者提供真实的旅游攻略和文化体验。
                     </p>
                   </div>
                   
@@ -450,7 +452,10 @@ const RedBookProject = () => {
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
             <div className="grid grid-cols-2 gap-1 h-full">
-              {redBookPosts.slice(0, 4).map((post, idx) => <div key={idx} className="aspect-square overflow-hidden bg-gray-100">
+              <div className="col-span-2 aspect-video overflow-hidden bg-gray-100">
+                <img src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" alt="长城风光" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
+              </div>
+              {redBookPosts.slice(0, 2).map((post, idx) => <div key={idx} className="aspect-square overflow-hidden bg-gray-100">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
                 </div>)}
             </div>
@@ -465,4 +470,5 @@ const RedBookProject = () => {
       </div>
     </>;
 };
+
 export default RedBookProject;
