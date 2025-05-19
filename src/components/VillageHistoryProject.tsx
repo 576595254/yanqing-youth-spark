@@ -226,10 +226,10 @@ const VillageHistoryProject = () => {
       <div className="cursor-pointer group" onClick={() => setOpen(true)}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2 order-2 md:order-1">
-            <h3 className="text-2xl font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors">
+            <h3 className="font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors text-4xl py-[16px]">
               "寻找村落中的历史记忆"文物古迹集
             </h3>
-            <p className="text-gray-600 mb-4">选调生团队搜集延庆5个乡镇，记录发现文物古迹23处，为保护延庆区历史文化遗产做出重要贡献，并编纂出版《延庆村落历史记忆》手册。</p>
+            <p className="text-gray-600 mb-4 py-[8px]">选调生团队搜集延庆5个乡镇，记录发现文物古迹23处，为保护延庆区历史文化遗产做出重要贡献，并编纂出版《延庆村落历史记忆》手册。</p>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
                 #文化保护
