@@ -22,15 +22,16 @@ const Banner = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* 这里的大背景图换一张延庆区长城的图片，以蓝绿色调为主 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-300 to-gray-600 bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+      {/* Banner background with Yanqing landscape */}
+      <div className="absolute inset-0 banner-bg bg-cover bg-center bg-fixed">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
       </div>
       
       <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center relative z-10">
         <div className={`text-center max-w-3xl transition-all duration-1000 ${loaded ? 'opacity-100' : 'opacity-0 transform translate-y-10'}`}>
-          <div className="mb-8 inline-block animate-float">
-            <div className="h-20 w-20 md:h-28 md:w-28 mx-auto mb-4 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+          <div className="mb-4 inline-block">
+            <p className="text-white/90 uppercase tracking-widest text-sm font-medium mb-2">北京市延庆区</p>
+            <div className="h-20 w-20 md:h-28 md:w-28 mx-auto mb-4 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center animate-float">
               <span className="text-white text-3xl md:text-4xl font-bold">延庆</span>
             </div>
           </div>
