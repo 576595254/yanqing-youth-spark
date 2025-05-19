@@ -23,7 +23,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       className="project-card cursor-pointer" 
       onClick={onClick}
       style={{ 
-        animationDelay: `${delay}ms`,
         opacity: 0,
         animation: 'fadeIn 0.5s forwards',
         animationDelay: `${delay}ms`
