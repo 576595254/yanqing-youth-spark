@@ -86,13 +86,9 @@ const VillageHistoryProject = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <div className="text-center mb-4">
-              <img src="/lovable-uploads/f8eeaba7-86e0-4f7c-a612-54e126ccd16b.png" alt="寻找村落中的历史记忆" className="h-16 mx-auto mb-2" />
-            </div>
-            <DialogTitle className="text-2xl text-center">寻找村落中的历史记忆</DialogTitle>
-            <DialogDescription className="text-center">
-              延庆区选调生团队通过实地调研，记录并保护村落历史文化遗产
-            </DialogDescription>
+            
+            <DialogTitle className="text-center px-[12px] py-[19px] text-4xl">寻找村落中的历史记忆</DialogTitle>
+            <DialogDescription className="text-center">这些承载着地域文明的 “活化石”，亟待被重新看见。</DialogDescription>
           </DialogHeader>
           
           <Tabs defaultValue="overview" value={activeTab} onValueChange={setActiveTab} className="w-full mt-4">
@@ -104,7 +100,7 @@ const VillageHistoryProject = () => {
             
             <TabsContent value="overview" className="p-1 space-y-6">
               <div className="prose max-w-none">
-                <div className="bg-amber-50 p-6 rounded-lg mb-6 border border-amber-200">
+                <div className="bg-amber-50 p-6 rounded-lg mb-6 border border-amber-200 py-[38px]">
                   <h3 className="text-xl font-bold text-yanqingGreen mb-3">在延庆的古村巷陌间，散落着无数被时光封存的文化密码 —— </h3>
                   <p className="text-gray-700">
                     延庆区拥有丰富的历史文化遗产，但由于城市化进程加快，许多村落中的历史文物和集体记忆正在逐渐消失，它们沉默矗立，却鲜有人知晓其背后的千年故事。延庆区选调生团队以 "寻踪者" 的身份，发起"寻找村落中的历史记忆"项目，开启了一场跨越时空的文化对话。
@@ -112,7 +108,7 @@ const VillageHistoryProject = () => {
                 </div>
                 
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目成果展示</h3>
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     {treasureImages.map((img, idx) => <div key={idx} className="overflow-hidden rounded-lg shadow-md">
                         <img src={img.src} alt={img.alt} className="w-full h-auto" />
@@ -137,12 +133,9 @@ const VillageHistoryProject = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目成果运用</h3>
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-4 mx-[19px]">未来成果运用</h3>
                   <div className="p-4 border rounded-lg">
-                    <p className="text-gray-700">
-                      未来我们将通过选调生团队编纂出版《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。
-                      同时，通过建立延庆区文物古迹数字档案，为未来的文化遗产保护和文旅产业发展提供了数据支持。
-                    </p>
+                    <p className="text-gray-700">未来我们将通过编纂《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。 同时，上线的百度词条等，让这些文化遗产突破地理边界，成为全网可查的 “延庆文化名片”。</p>
                   </div>
                 </div>
               </div>
