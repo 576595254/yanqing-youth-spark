@@ -122,7 +122,7 @@ const VillageHistoryProject = () => {
                 </div>
                 
                 <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目进展现状</h3>
+                  <h3 className="text-xl font-bold text-yanqingGreen mb-4">进展情况</h3>
                   <p className="text-gray-700 mb-4">
                     现在已经收集延庆镇、永宁镇、康庄镇、张山营镇、刘斌堡乡<span className="text-red-500 font-bold">5个乡镇23处历史遗迹的基础材料</span>。
                     通过走访延庆17个乡镇，已记录发现文物古迹45处，收集口述历史127段，为保护延庆区历史文化遗产做出重要贡献。
@@ -140,16 +140,9 @@ const VillageHistoryProject = () => {
                   <h3 className="text-xl font-bold text-yanqingGreen mb-4">项目成果运用</h3>
                   <div className="p-4 border rounded-lg">
                     <p className="text-gray-700">
-                      选调生团队编纂出版《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。
+                      未来我们将通过选调生团队编纂出版《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。
                       同时，通过建立延庆区文物古迹数字档案，为未来的文化遗产保护和文旅产业发展提供了数据支持。
                     </p>
-                    <div className="mt-4 flex justify-center">
-                      <img
-                        src="/lovable-uploads/e38bff2f-1797-42bc-b548-660ecf1945c6.png"
-                        alt="《延庆村落历史记忆》手册"
-                        className="h-40 rounded-md shadow-md"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
