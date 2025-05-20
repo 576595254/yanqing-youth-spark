@@ -251,16 +251,16 @@ const RedBookProject = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
-                        <div className="font-bold text-center text-yanqingGreen text-2xl">20,000+</div>
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">100+</div>
                         <div className="text-center text-gray-600 text-sm">粉丝数量</div>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
-                        <div className="font-bold text-center text-yanqingGreen text-2xl">87</div>
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">25</div>
                         <div className="text-center text-gray-600 text-sm">发布笔记</div>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
-                        <div className="font-bold text-center text-yanqingGreen text-2xl">10万+</div>
-                        <div className="text-center text-gray-600 text-sm">月均浏览量</div>
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">2万+</div>
+                        <div className="text-center text-gray-600 text-sm">浏览量</div>
                       </div>
                     </div>
                   </div>
