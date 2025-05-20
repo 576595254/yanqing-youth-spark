@@ -5,14 +5,7 @@ import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award } from 'lucide-r
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { useInView } from 'react-intersection-observer';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel";
-
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 const redBookPosts = [{
   id: 1,
   title: "探访延庆世园会遗址公园",
@@ -46,7 +39,6 @@ const redBookPosts = [{
   views: 18720,
   tags: ["延庆美食", "夜市", "美食攻略"]
 }];
-
 const contentPlanData = [{
   seq: 1,
   period: "7月上旬",
@@ -145,22 +137,22 @@ const extendedPlanData = [{
   executor: "黄蓉莉",
   team: "一组"
 }];
-
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
-  const { ref: animationRef, inView } = useInView({
+  const {
+    ref: animationRef,
+    inView
+  } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.1
   });
-  
   const stats = {
     followers: 20000,
     posts: 87,
     monthlyViews: 100000,
     interaction: 4.8
   };
-  
   const trendData = [{
     month: '1月',
     followers: 12500
@@ -180,13 +172,10 @@ const RedBookProject = () => {
     month: '6月',
     followers: 18000
   }];
-  
   const handleDetailClick = () => {
     setOpen(true);
   };
-  
-  return (
-    <>
+  return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
@@ -285,7 +274,7 @@ const RedBookProject = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {redBookPosts.map(post => <div key={post.id} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
                     <div className="aspect-[3/4] overflow-hidden">
-                      <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" />
+                      <img src={post.image} alt={post.title} className="w-full h-full transition-transform hover:scale-105 duration-300 object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-bold text-lg mb-2">{post.title}</h4>
@@ -460,12 +449,7 @@ const RedBookProject = () => {
         </DialogContent>
       </Dialog>
       
-      <div 
-        ref={animationRef} 
-        className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${
-          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
-      >
+      <div ref={animationRef} className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="flex flex-col md:flex-row gap-6 relative">
           {/* Left content */}
           <div className="md:w-1/2 z-10">
@@ -488,10 +472,7 @@ const RedBookProject = () => {
               </span>
             </div>
             
-            <button 
-              onClick={handleDetailClick} 
-              className="flex items-center text-amber-500 font-medium hover:text-amber-600 transition-all group"
-            >
+            <button onClick={handleDetailClick} className="flex items-center text-amber-500 font-medium hover:text-amber-600 transition-all group">
               <span>查看详情</span>
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -502,44 +483,30 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img 
-                  src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" 
-                  alt="长城风光" 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                />
+                <img src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
               </div>
               
               {/* RedBook screenshots in a grid */}
               <div className="col-span-3 h-64 relative animate-float">
-                <img 
-                  src="/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png" 
-                  alt="夜市合集" 
-                  className="h-full w-full object-cover rounded-lg shadow-lg"
-                />
+                <img src="/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png" alt="夜市合集" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
               
-              <div className="col-span-3 h-64 relative translate-y-4 animate-float" style={{animationDelay: "1s"}}>
-                <img 
-                  src="/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png" 
-                  alt="徒步路线" 
-                  className="h-full w-full object-cover rounded-lg shadow-lg"
-                />
+              <div className="col-span-3 h-64 relative translate-y-4 animate-float" style={{
+              animationDelay: "1s"
+            }}>
+                <img src="/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png" alt="徒步路线" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
               
-              <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{animationDelay: "1.5s"}}>
-                <img 
-                  src="/lovable-uploads/ccb6dbce-175a-4df3-9130-333395b40c03.png" 
-                  alt="九眼楼" 
-                  className="h-full w-full object-cover rounded-lg shadow-lg"
-                />
+              <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{
+              animationDelay: "1.5s"
+            }}>
+                <img src="/lovable-uploads/ccb6dbce-175a-4df3-9130-333395b40c03.png" alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
               
-              <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{animationDelay: "0.5s"}}>
-                <img 
-                  src="/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png" 
-                  alt="评论区" 
-                  className="h-full w-full object-cover rounded-lg shadow-lg"
-                />
+              <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{
+              animationDelay: "0.5s"
+            }}>
+                <img src="/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png" alt="评论区" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
             
@@ -578,8 +545,6 @@ const RedBookProject = () => {
           </Card>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default RedBookProject;
