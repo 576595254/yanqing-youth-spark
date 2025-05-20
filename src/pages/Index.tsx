@@ -1,36 +1,28 @@
-
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import StatsSidebar from '@/components/StatsSidebar';
 import ProjectManagement from '@/components/ProjectManagement';
 import ManagementSystem from '@/components/ManagementSystem';
-
 const Index = () => {
   useEffect(() => {
     // Implement AOS (Animate on Scroll) functionality
     const handleScroll = () => {
       const scrollElements = document.querySelectorAll('[data-aos]');
-      
       scrollElements.forEach(element => {
         const elementPosition = element.getBoundingClientRect().top;
         const scrollPosition = window.innerHeight * 0.8;
-        
         if (elementPosition < scrollPosition) {
           element.classList.add('animate-fade-in');
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     // Initial check for elements in viewport
     handleScroll();
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen w-full">
+  return <div className="min-h-screen w-full">
       <Header />
       <Banner />
       <StatsSidebar />
@@ -41,7 +33,7 @@ const Index = () => {
         
         <section id="resources" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-16">资源对接</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-16">资源对接与</h2>
             <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示资源对接会与《长城青年说》等活动内容与成果。</p>
           </div>
         </section>
@@ -67,8 +59,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

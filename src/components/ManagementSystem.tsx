@@ -1,14 +1,10 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
 const ManagementSystem = () => {
   const [activeTab, setActiveTab] = useState("method");
-  
-  return (
-    <section id="management" className="py-20 bg-white">
+  return <section id="management" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-block mb-4">
@@ -17,11 +13,11 @@ const ManagementSystem = () => {
             </span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-4">
+          <h2 className="text-3xl font-bold text-yanqingGreen mb-4 px-[5px] py-[25px] md:text-5xl">
             管理<span className="text-activeOrange">制度</span>
           </h2>
           
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg py-[16px] mx-[8px]">
             此部分展示延庆区选调生团队管理制度、考核办法等内容，以电子手册形式呈现
           </p>
         </div>
@@ -166,8 +162,6 @@ const ManagementSystem = () => {
           </Tabs>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ManagementSystem;
