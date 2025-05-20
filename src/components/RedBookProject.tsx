@@ -457,7 +457,7 @@ const RedBookProject = () => {
         <div className="flex flex-col md:flex-row gap-6 relative">
           {/* Left content */}
           <div className="md:w-1/2 z-10 px-0">
-            <h3 className="text-amber-500 text-3xl font-bold mb-4">小红书账号"小选和她的朋友们"</h3>
+            <h3 className="text-amber-500 text-3xl font-bold mb-4">"小选和她的朋友们"泛生活化文旅种草项目</h3>
             
             <p className="text-gray-700 mb-6">
               打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。
