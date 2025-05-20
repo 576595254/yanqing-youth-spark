@@ -457,10 +457,7 @@ const RedBookProject = () => {
           <div className="md:w-1/2 z-10 px-0">
             <h3 className="text-amber-500 text-3xl font-bold mb-4">"小选和她的朋友们"泛生活化文旅种草项目</h3>
             
-            <p className="text-gray-700 mb-6">
-              打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。
-              目前累计阅读量超过2万，是展示选调生工作和延庆生活的重要窗口。
-            </p>
+            <p className="text-gray-700 mb-6">在小红书、抖音打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。 目前累计阅读量超过2万，是展示选调生面貌和延庆生活的重要窗口。</p>
             
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
