@@ -6,7 +6,6 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { useInView } from 'react-intersection-observer';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 const redBookPosts = [{
   id: 1,
   title: "探访延庆世园会遗址公园",
@@ -457,7 +456,7 @@ const RedBookProject = () => {
       <div ref={animationRef} className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="flex flex-col md:flex-row gap-6 relative">
           {/* Left content */}
-          <div className="md:w-1/2 z-10">
+          <div className="md:w-1/2 z-10 px-0">
             <h3 className="text-amber-500 text-3xl font-bold mb-4">小红书账号"小选和她的朋友们"</h3>
             
             <p className="text-gray-700 mb-6">
@@ -488,7 +487,7 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" />
+                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" src="/lovable-uploads/367cd307-0da7-46af-a650-4dd62767ad99.jpg" />
               </div>
               
               {/* RedBook screenshots in a grid */}
