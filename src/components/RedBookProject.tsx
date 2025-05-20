@@ -487,7 +487,7 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-105 duration-500" src="/lovable-uploads/367cd307-0da7-46af-a650-4dd62767ad99.jpg" />
+                <img alt="长城风光" src="/lovable-uploads/367cd307-0da7-46af-a650-4dd62767ad99.jpg" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" />
               </div>
               
               {/* RedBook screenshots in a grid */}
