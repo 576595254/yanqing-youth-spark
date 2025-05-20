@@ -1,9 +1,12 @@
+
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Banner from '@/components/Banner';
 import StatsSidebar from '@/components/StatsSidebar';
 import ProjectManagement from '@/components/ProjectManagement';
 import ManagementSystem from '@/components/ManagementSystem';
+import ResourceShowcase from '@/components/ResourceShowcase';
+
 const Index = () => {
   useEffect(() => {
     // Implement AOS (Animate on Scroll) functionality
@@ -22,6 +25,7 @@ const Index = () => {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   return <div className="min-h-screen w-full">
       <Header />
       <Banner />
@@ -32,9 +36,16 @@ const Index = () => {
         <ManagementSystem />
         
         <section id="resources" className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-16 text-orange-400 px-[6px] py-[25px] md:text-5xl">资源对接与宣传推广</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示资源对接会与《长城青年说》等活动内容与成果。</p>
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-orange-400 px-[6px] py-[15px] md:text-5xl relative inline-block">
+                资源对接与宣传推广
+                <span className="absolute -bottom-2 left-1/2 w-24 h-1 bg-orange-400 transform -translate-x-1/2"></span>
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">此部分将展示资源对接会与《长城青年说》等活动内容与成果。</p>
+            </div>
+            
+            <ResourceShowcase />
           </div>
         </section>
         
@@ -61,4 +72,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
