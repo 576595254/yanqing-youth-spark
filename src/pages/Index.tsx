@@ -33,14 +33,14 @@ const Index = () => {
         
         <section id="resources" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-16">资源对接与</h2>
+            <h2 className="text-3xl font-bold mb-16 text-orange-400 px-[6px] py-[25px] md:text-5xl">资源对接与宣传推广</h2>
             <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示资源对接会与《长城青年说》等活动内容与成果。</p>
           </div>
         </section>
         
         <section id="research" className="py-20 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-yanqingGreen mb-16">调研报告</h2>
+            <h2 className="text-3xl text-yanqingGreen mb-16 py-[25px] font-bold md:text-5xl">调研报告</h2>
             <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示各类调研报告与研究成果。</p>
           </div>
         </section>
