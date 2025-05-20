@@ -179,10 +179,8 @@ const RedBookProject = () => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl">小红书账号"小选和她的朋友们"</DialogTitle>
-            <DialogDescription>
-              延庆区选调生团队运营的官方社交媒体平台，分享延庆风土人情及选调生基层工作
-            </DialogDescription>
+            <DialogTitle className="text-2xl">"小选和她的朋友们"泛生活化文旅种草项目</DialogTitle>
+            <DialogDescription>延庆区选调生团队运营的社交媒体平台，分享延庆风土人情及自然风光</DialogDescription>
           </DialogHeader>
           
           <div className="mb-6">
@@ -190,9 +188,7 @@ const RedBookProject = () => {
               <p className="text-amber-800 font-medium text-center text-lg mb-2">
                 一群来自大南海北的小选带大家看不一样的延庆
               </p>
-              <p className="text-amber-700 text-sm text-center">
-                账号Slogan
-              </p>
+              <p className="text-amber-700 text-sm text-center">— —延庆文旅的青春叙事</p>
             </div>
           </div>
           
@@ -206,11 +202,11 @@ const RedBookProject = () => {
             
             <TabsContent value="intro" className="space-y-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-bold text-xl mb-6 text-yanqingGreen bg-gradient-to-r from-yanqingGreen/10 to-transparent px-4 py-2 rounded-md inline-block">延庆区2022届选调生"小选与她的朋友们"泛生活化文旅种草项目</h3>
+                
                 
                 <article className="space-y-6">
                   <div className="relative pl-5 border-l-4 border-amber-400">
-                    <h4 className="font-semibold text-lg mb-3 bg-gradient-to-r from-amber-50 to-transparent px-3 py-1 rounded-sm">"小选和她的朋友们"—— 延庆文旅的青春叙事</h4>
+                    
                     <p className="text-gray-700 leading-relaxed">
                       在延庆的青山绿水间，藏着许多不为人知的美好角落。如何让这些美景、美食与人文故事被更多人看见？带着这样的初衷，"小选和她的朋友们" 诞生了。这是一群选调生以青春之名，为延庆文旅书写的生动注脚。
                     </p>
