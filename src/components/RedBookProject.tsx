@@ -510,24 +510,12 @@ const RedBookProject = () => {
             </div>
             
             {/* Floating stats card */}
-            <div className="absolute top-5 right-0 bg-white/95 rounded-lg shadow-lg p-4 transform -translate-y-6 translate-x-4 z-20 w-40 animate-float">
-              <div className="flex flex-col items-center">
-                <div className="text-green-600 font-bold">
-                  <div className="text-sm text-gray-500">小红书浏览量</div>
-                  <div className="text-2xl">20000+</div>
-                </div>
-                
-                <div className="mt-3 text-green-600 font-bold">
-                  <div className="text-sm text-gray-500">文物古迹收录</div>
-                  <div className="text-2xl">23处</div>
-                </div>
-              </div>
-            </div>
+            
             
             {/* Hot notes overlay */}
             <div className="absolute bottom-4 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm z-20">
               <p className="font-bold">热门笔记瀑布流</p>
-              <p className="text-xs text-white/80">浏览量累计 100,000+</p>
+              <p className="text-xs text-white/80">浏览量累计 50,000+</p>
             </div>
           </div>
         </div>
