@@ -16,7 +16,7 @@ import {
 const redBookPosts = [{
   id: 1,
   title: "探访延庆世园会遗址公园",
-  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书1",
+  image: "/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png",
   likes: 328,
   comments: 42,
   views: 12580,
@@ -24,7 +24,7 @@ const redBookPosts = [{
 }, {
   id: 2,
   title: "零用工平台入户调研实录",
-  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书2",
+  image: "/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png",
   likes: 256,
   comments: 37,
   views: 9650,
@@ -32,7 +32,7 @@ const redBookPosts = [{
 }, {
   id: 3,
   title: "延庆非遗面人技艺传承人专访",
-  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/小红书3",
+  image: "/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png",
   likes: 412,
   comments: 67,
   views: 15320,
@@ -40,12 +40,13 @@ const redBookPosts = [{
 }, {
   id: 4,
   title: "北京延庆夜市合集",
-  image: "https://placeholder.pics/svg/300x400/DEDEDE/555555/夜市合集",
+  image: "/lovable-uploads/de705909-cce1-48d6-a9e4-29c35f0fe7d0.png",
   likes: 486,
   comments: 57,
   views: 18720,
   tags: ["延庆美食", "夜市", "美食攻略"]
 }];
+
 const contentPlanData = [{
   seq: 1,
   period: "7月上旬",
@@ -144,6 +145,7 @@ const extendedPlanData = [{
   executor: "黄蓉莉",
   team: "一组"
 }];
+
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
@@ -231,7 +233,7 @@ const RedBookProject = () => {
                       团队成员分工合作，充分挖掘延庆区的文化旅游亮点，通过精心策划和制作高质量的图文和视频内容，定期更新在小红书平台上。我们采用项目化管理模式，将团队分为多个小组，每组负责不同主题的内容创作，确保内容的多样性和持续更新。
                     </p>
                     <p className="text-gray-700">
-                      在运营过程中，我们注重选题的策划和内容质量��主打真诚体验派、活力年轻化、干货生活化的风格，深入挖掘延庆本地文化和风景特色，为读者提供真实的旅游攻略和文化体验。
+                      在运营过程中，我们注重选题的策划和内容质量，主打真诚体验派、活力年轻化、干货生活化的风格，深入挖掘延庆本地文化和风景特色，为读者提供真实的旅游攻略和文化体验。
                     </p>
                   </div>
                   
@@ -480,11 +482,11 @@ const RedBookProject = () => {
             </button>
           </div>
           
-          {/* Right content - Images Grid with Animation */}
+          {/* Right content - Real RedBook Screenshots with Animation */}
           <div className="md:w-1/2 relative">
-            <div className="grid grid-cols-3 gap-3 transform rotate-2 transition-all hover:rotate-0 duration-300">
+            <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
-              <div className="col-span-3 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
+              <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
                 <img 
                   src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" 
                   alt="长城风光" 
@@ -492,53 +494,57 @@ const RedBookProject = () => {
                 />
               </div>
               
-              {/* Smaller redbook posts in a grid */}
-              <div className="col-span-2 row-span-2 h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all">
-                <Carousel className="w-full h-full">
-                  <CarouselContent className="h-full">
-                    {redBookPosts.slice(0, 3).map((post, idx) => (
-                      <CarouselItem key={idx} className="h-full">
-                        <div className="h-full relative">
-                          <img 
-                            src={post.image} 
-                            alt={post.title} 
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                            <p className="text-white text-sm font-medium">{post.title}</p>
-                          </div>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                </Carousel>
+              {/* RedBook screenshots in a grid */}
+              <div className="col-span-3 h-64 relative animate-float">
+                <img 
+                  src="/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png" 
+                  alt="夜市合集" 
+                  className="h-full w-full object-cover rounded-lg shadow-lg"
+                />
               </div>
               
-              {/* Floating stats card */}
-              <div className="absolute top-5 right-0 bg-white/95 rounded-lg shadow-lg p-4 transform -translate-y-6 translate-x-4 z-20 w-40 animate-float">
-                <div className="flex flex-col items-center">
-                  <div className="text-green-600 font-bold">
-                    <div className="text-sm text-gray-500">小红书粉丝量</div>
-                    <div className="text-2xl">20000+</div>
-                  </div>
-                  
-                  <div className="mt-3 text-green-600 font-bold">
-                    <div className="text-sm text-gray-500">文物古迹收录</div>
-                    <div className="text-2xl">23处</div>
-                  </div>
+              <div className="col-span-3 h-64 relative translate-y-4 animate-float" style={{animationDelay: "1s"}}>
+                <img 
+                  src="/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png" 
+                  alt="徒步路线" 
+                  className="h-full w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              
+              <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{animationDelay: "1.5s"}}>
+                <img 
+                  src="/lovable-uploads/ccb6dbce-175a-4df3-9130-333395b40c03.png" 
+                  alt="九眼楼" 
+                  className="h-full w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              
+              <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{animationDelay: "0.5s"}}>
+                <img 
+                  src="/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png" 
+                  alt="评论区" 
+                  className="h-full w-full object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+            
+            {/* Floating stats card */}
+            <div className="absolute top-5 right-0 bg-white/95 rounded-lg shadow-lg p-4 transform -translate-y-6 translate-x-4 z-20 w-40 animate-float">
+              <div className="flex flex-col items-center">
+                <div className="text-green-600 font-bold">
+                  <div className="text-sm text-gray-500">小红书粉丝量</div>
+                  <div className="text-2xl">20000+</div>
                 </div>
-              </div>
-              
-              {/* Additional small image */}
-              <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-48">
-                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center p-2">
-                  <p className="text-xs text-gray-500">小红书1</p>
+                
+                <div className="mt-3 text-green-600 font-bold">
+                  <div className="text-sm text-gray-500">文物古迹收录</div>
+                  <div className="text-2xl">23处</div>
                 </div>
               </div>
             </div>
             
             {/* Hot notes overlay */}
-            <div className="absolute bottom-4 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm">
+            <div className="absolute bottom-4 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm z-20">
               <p className="font-bold">热门笔记瀑布流</p>
               <p className="text-xs text-white/80">浏览量累计 100,000+</p>
             </div>
