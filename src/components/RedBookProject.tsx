@@ -217,52 +217,67 @@ const RedBookProject = () => {
             
             <TabsContent value="intro" className="space-y-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="font-bold text-xl mb-4 text-yanqingGreen">延庆区2022届选调生"小选与她的朋友们"泛生活化文旅种草项目</h3>
+                <h3 className="font-bold text-xl mb-6 text-yanqingGreen bg-gradient-to-r from-yanqingGreen/10 to-transparent px-4 py-2 rounded-md inline-block">延庆区2022届选调生"小选与她的朋友们"泛生活化文旅种草项目</h3>
                 
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">项目起因</h4>
-                    <p className="text-gray-700">
-                      为了更好地宣传延庆区的文化旅游资源，展示选调生团队的基层工作成果，同时为延庆区居民和游客提供优质的旅游咨询和文旅体验，我们创建了"小选与她的朋友们"小红书账号，致力于打造一个生动展现延庆风土人情和选调生工作的社交媒体平台。
+                <article className="space-y-6">
+                  <div className="relative pl-5 border-l-4 border-amber-400">
+                    <h4 className="font-semibold text-lg mb-3 bg-gradient-to-r from-amber-50 to-transparent px-3 py-1 rounded-sm">"小选和她的朋友们"—— 延庆文旅的青春叙事</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      在延庆的青山绿水间，藏着许多不为人知的美好角落。如何让这些美景、美食与人文故事被更多人看见？带着这样的初衷，"小选和她的朋友们" 诞生了。这是一群选调生以青春之名，为延庆文旅书写的生动注脚。
                     </p>
                   </div>
                   
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">项目经过</h4>
-                    <p className="text-gray-700 mb-3">
-                      团队成员分工合作，充分挖掘延庆区的文化旅游亮点，通过精心策划和制作高质量的图文和视频内容，定期更新在小红书平台上。我们采用项目化管理模式，将团队分为多个小组，每组负责不同主题的内容创作，确保内容的多样性和持续更新。
-                    </p>
-                    <p className="text-gray-700">
-                      在运营过程中，我们注重选题的策划和内容质量，主打真诚体验派、活力年轻化、干货生活化的风格，深入挖掘延庆本地文化和风景特色，为读者提供真实的旅游攻略和文化体验。
+                  <div className="bg-gradient-to-r from-yanqingGreen/5 to-transparent p-5 rounded-lg">
+                    <h4 className="font-semibold text-lg mb-3 flex items-center">
+                      <span className="h-8 w-8 bg-yanqingGreen/20 rounded-full flex items-center justify-center text-yanqingGreen mr-2">1</span>
+                      缘起：让延庆的美好 "破圈"
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      延庆有着四季如画的风景、充满烟火气的夜市、小众却迷人的徒步路线。但这些美好，却少了一个年轻视角的讲述者。我们想，为何不用新媒体的方式，让延庆的文旅魅力触达更多人？于是，"小选和她的朋友们" 应运而生，以小红书、抖音为窗口，用图文和视频记录延庆的点点滴滴。
                     </p>
                   </div>
                   
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">项目成果</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                        <h5 className="font-medium text-green-700 mb-2">用户增长</h5>
-                        <p className="text-gray-700">
-                          账号从创建至今已累计吸引超过18,000名粉丝，月均浏览量超过10万，单条笔记最高获得1万+阅读量，互动率高达4.8%，远超平台平均水平。
-                        </p>
+                  <div className="bg-gradient-to-r from-transparent to-amber-50/50 p-5 rounded-lg">
+                    <h4 className="font-semibold text-lg mb-3 flex items-center">
+                      <span className="h-8 w-8 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 mr-2">2</span>
+                      意义：搭建文旅与年轻群体的桥梁
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      在快节奏的都市生活中，人们渴望周末能有一处放松之地。"小选和她的朋友们" 专注于挖掘延庆的泛生活化文旅场景，无论是夜市里的烟火气，还是长城脚下的徒步秘境，都以真诚体验派的风格呈现。我们希望通过这种年轻化、干货生活化的表达，让更多人发现延庆的魅力，为乡村旅游注入新活力，也为延庆文旅在新媒体时代的传播探索新路径。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-yanqingGreen/5 to-transparent p-5 rounded-lg">
+                    <h4 className="font-semibold text-lg mb-3 flex items-center">
+                      <span className="h-8 w-8 bg-yanqingGreen/20 rounded-full flex items-center justify-center text-yanqingGreen mr-2">3</span>
+                      成果：用青春笔触绘就文旅新篇
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      如今，"小选和她的朋友们" 已成为展示延庆的一张新名片。发布的夜市合集、徒步路线等内容，吸引了众多用户的关注与互动。从 "北京延庆夜市 City - City" 的热闹，到 "长城脚下的秘境之地" 的宁静，每一篇笔记都带着对这片土地的热爱。账号阅读量不断突破，互动量持续增长，越来越多的人因为这些分享，开始走进延庆，感受它的独特魅力。这不仅是一个账号的成长，更是延庆文旅在新媒体时代绽放光彩的见证。
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+                      <div className="bg-white p-4 rounded-lg border border-yanqingGreen/20 shadow-sm">
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">20,000+</div>
+                        <div className="text-center text-gray-600 text-sm">粉丝数量</div>
                       </div>
-                      
-                      <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                        <h5 className="font-medium text-blue-700 mb-2">内容成果</h5>
-                        <p className="text-gray-700">
-                          已发布87篇优质笔记，覆盖延庆区的美食、景点、文化活动等多个方面，成功打造了多个系列内容，如"夜市合集"、"咖啡合集"、"四季风景"等，获得用户广泛好评。
-                        </p>
+                      <div className="bg-white p-4 rounded-lg border border-yanqingGreen/20 shadow-sm">
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">87</div>
+                        <div className="text-center text-gray-600 text-sm">发布笔记</div>
                       </div>
-                      
-                      <div className="bg-purple-50 p-4 rounded-lg border border-purple-200 md:col-span-2">
-                        <h5 className="font-medium text-purple-700 mb-2">社会影响</h5>
-                        <p className="text-gray-700">
-                          通过平台影响力，成功推广了延庆区的旅游资源和文化活动，促进了当地旅游业的发展，同时展示了选调生团队的工作成果和基层风采，增强了公众对基层工作的了解和认同。
-                        </p>
+                      <div className="bg-white p-4 rounded-lg border border-yanqingGreen/20 shadow-sm">
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">10万+</div>
+                        <div className="text-center text-gray-600 text-sm">月均浏览量</div>
                       </div>
                     </div>
                   </div>
-                </div>
+                  
+                  <div className="bg-gradient-to-b from-white to-amber-50/30 p-5 rounded-lg border border-amber-100/50">
+                    <p className="text-gray-700 leading-relaxed italic border-l-4 border-amber-300 pl-4">
+                      未来，"小选和她的朋友们" 将继续以脚步丈量延庆的美好，用镜头和文字讲述更多故事，让这片土地的魅力被更多人看见，为延庆文旅的发展贡献青春力量。
+                    </p>
+                  </div>
+                </article>
               </div>
             </TabsContent>
             
