@@ -1,10 +1,13 @@
+
 import React from 'react';
 import RedBookProject from './RedBookProject';
 import VillageHistoryProject from './VillageHistoryProject';
 import ZeroWorkPlatform from './ZeroWorkPlatform';
 import { ArrowDown } from 'lucide-react';
+
 const ProjectManagement = () => {
-  return <section id="projects" className="py-20 bg-gray-50">
+  return (
+    <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-block mb-4">
@@ -40,6 +43,8 @@ const ProjectManagement = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ProjectManagement;
