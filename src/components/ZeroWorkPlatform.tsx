@@ -1,34 +1,60 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-
 const ZeroWorkPlatform = () => {
   const [open, setOpen] = useState(false);
-  
   const stats = {
     registeredUsers: 647,
     solvedCases: 512,
     employmentRate: 79,
     avgWage: 3600
   };
-  
-  const industries = [
-    { name: "农业种植", percentage: 34, color: "#008066" },
-    { name: "家政服务", percentage: 28, color: "#FFA500" },
-    { name: "手工制作", percentage: 17, color: "#A45ee5" },
-    { name: "园艺绿化", percentage: 12, color: "#4CAF50" },
-    { name: "其他", percentage: 9, color: "#9E9E9E" }
-  ];
-  
-  const cases = [
-    { village: "康庄村", user: "张大叔", job: "农田管理", status: "已结算", wage: 3800 },
-    { village: "大榆树村", user: "王奶奶", job: "家庭保洁", status: "进行中", wage: 2500 },
-    { village: "四海镇", user: "李师傅", job: "木工修缮", status: "已结算", wage: 4200 },
-    { village: "古城村", user: "赵大姐", job: "农产品加工", status: "已结算", wage: 3400 }
-  ];
-
-  return (
-    <>
+  const industries = [{
+    name: "农业种植",
+    percentage: 34,
+    color: "#008066"
+  }, {
+    name: "家政服务",
+    percentage: 28,
+    color: "#FFA500"
+  }, {
+    name: "手工制作",
+    percentage: 17,
+    color: "#A45ee5"
+  }, {
+    name: "园艺绿化",
+    percentage: 12,
+    color: "#4CAF50"
+  }, {
+    name: "其他",
+    percentage: 9,
+    color: "#9E9E9E"
+  }];
+  const cases = [{
+    village: "康庄村",
+    user: "张大叔",
+    job: "农田管理",
+    status: "已结算",
+    wage: 3800
+  }, {
+    village: "大榆树村",
+    user: "王奶奶",
+    job: "家庭保洁",
+    status: "进行中",
+    wage: 2500
+  }, {
+    village: "四海镇",
+    user: "李师傅",
+    job: "木工修缮",
+    status: "已结算",
+    wage: 4200
+  }, {
+    village: "古城村",
+    user: "赵大姐",
+    job: "农产品加工",
+    status: "已结算",
+    wage: 3400
+  }];
+  return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-4xl">
           <DialogHeader>
@@ -79,20 +105,18 @@ const ZeroWorkPlatform = () => {
                 <h3 className="font-bold text-lg mb-4">行业分布</h3>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="flex flex-col space-y-4">
-                    {industries.map((industry) => (
-                      <div key={industry.name} className="space-y-1">
+                    {industries.map(industry => <div key={industry.name} className="space-y-1">
                         <div className="flex justify-between text-sm">
                           <span>{industry.name}</span>
                           <span className="font-medium">{industry.percentage}%</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2.5">
-                          <div 
-                            className="h-2.5 rounded-full" 
-                            style={{ width: `${industry.percentage}%`, backgroundColor: industry.color }}
-                          ></div>
+                          <div className="h-2.5 rounded-full" style={{
+                        width: `${industry.percentage}%`,
+                        backgroundColor: industry.color
+                      }}></div>
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -110,22 +134,16 @@ const ZeroWorkPlatform = () => {
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                      {cases.map((caseItem, idx) => (
-                        <tr key={idx} className="hover:bg-gray-50">
+                      {cases.map((caseItem, idx) => <tr key={idx} className="hover:bg-gray-50">
                           <td className="px-4 py-3 text-sm">{caseItem.village}</td>
                           <td className="px-4 py-3 text-sm">{caseItem.user}</td>
                           <td className="px-4 py-3 text-sm">{caseItem.job}</td>
                           <td className="px-4 py-3 text-sm">
-                            <span className={`px-2 py-1 rounded-full text-xs ${
-                              caseItem.status === "已结算" 
-                                ? "bg-green-100 text-green-800" 
-                                : "bg-yellow-100 text-yellow-800"
-                            }`}>
+                            <span className={`px-2 py-1 rounded-full text-xs ${caseItem.status === "已结算" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`}>
                               {caseItem.status}
                             </span>
                           </td>
-                        </tr>
-                      ))}
+                        </tr>)}
                     </tbody>
                   </table>
                 </div>
@@ -158,11 +176,7 @@ const ZeroWorkPlatform = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="md:col-span-1">
             <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
-              <img 
-                src="https://placeholder.pics/svg/300x300/DEDEDE/555555/零用工平台" 
-                alt="零用工平台Logo"
-                className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-              />
+              <img src="https://placeholder.pics/svg/300x300/DEDEDE/555555/零用工平台" alt="零用工平台Logo" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
             </div>
           </div>
           
@@ -170,9 +184,7 @@ const ZeroWorkPlatform = () => {
             <h3 className="text-2xl font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors">
               零用工平台
             </h3>
-            <p className="text-gray-600 mb-4">
-              该平台解决了延庆区农村劳动力"就业难"与企业"用工难"的双重问题，通过智能匹配将闲置劳动力与用工需求有效对接，已促成500余人次灵活就业，人均月增收3600元。
-            </p>
+            <p className="text-gray-600 mb-4">旨在助力解决延庆区农村劳动力&quot;就业难&quot;与企业&quot;用工难&quot;的双重问题，智能匹配乡村闲置劳动力与用工需求，与零工市场对接。</p>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
                 #灵活就业
@@ -185,30 +197,10 @@ const ZeroWorkPlatform = () => {
               </span>
             </div>
             
-            <div className="flex justify-between items-center">
-              <div className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform">
-                <span>查看详情</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="text-center">
-                  <p className="text-sm text-gray-500">注册用户</p>
-                  <p className="text-xl font-bold text-yanqingGreen animate-count">647</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-sm text-gray-500">已解决用工</p>
-                  <p className="text-xl font-bold text-yanqingGreen animate-count">512</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default ZeroWorkPlatform;
