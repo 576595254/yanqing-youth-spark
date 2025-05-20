@@ -180,15 +180,13 @@ const RedBookProject = () => {
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl">"小选和她的朋友们"泛生活化文旅种草项目</DialogTitle>
-            <DialogDescription>延庆区选调生团队运营的社交媒体平台，分享延庆风土人情及自然风光</DialogDescription>
+            <DialogDescription>延庆区选调生团队运营的社交媒体平台（小红书、抖音），分享延庆风土人情及自然风光</DialogDescription>
           </DialogHeader>
           
           <div className="mb-6">
             <div className="bg-amber-50 p-4 rounded-lg mb-4 border border-amber-200">
-              <p className="text-amber-800 font-medium text-center text-lg mb-2">
-                一群来自大南海北的小选带大家看不一样的延庆
-              </p>
-              <p className="text-amber-700 text-sm text-center">— — 延庆文旅的青春叙事</p>
+              <p className="text-amber-800 font-medium text-center mb-2 text-lg">📷来自天南海北的小选带大家看不一样的延庆</p>
+              <p className="text-amber-700 text-center text-sm">— — 延庆文旅的青春叙事</p>
             </div>
           </div>
           
@@ -251,15 +249,15 @@ const RedBookProject = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
-                        <div className="font-bold text-center text-yanqingGreen text-2xl">100+</div>
-                        <div className="text-center text-gray-600 text-sm">粉丝数量</div>
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">1000+</div>
+                        <div className="text-center text-gray-600 text-sm">获赞与收藏</div>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
                         <div className="font-bold text-center text-yanqingGreen text-2xl">25</div>
                         <div className="text-center text-gray-600 text-sm">发布笔记</div>
                       </div>
                       <div className="bg-white p-4 rounded-lg border border-teal-100 shadow-sm">
-                        <div className="font-bold text-center text-yanqingGreen text-2xl">2万+</div>
+                        <div className="font-bold text-center text-yanqingGreen text-2xl">5万+</div>
                         <div className="text-center text-gray-600 text-sm">浏览量</div>
                       </div>
                     </div>
