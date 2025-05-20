@@ -3,6 +3,16 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award } from 'lucide-react';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
+import { Card, CardContent } from "@/components/ui/card";
+import { useInView } from 'react-intersection-observer';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
+
 const redBookPosts = [{
   id: 1,
   title: "探访延庆世园会遗址公园",
@@ -137,12 +147,18 @@ const extendedPlanData = [{
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
+  const { ref: animationRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  
   const stats = {
-    followers: 18000,
+    followers: 20000,
     posts: 87,
     monthlyViews: 100000,
     interaction: 4.8
   };
+  
   const trendData = [{
     month: '1月',
     followers: 12500
@@ -162,10 +178,13 @@ const RedBookProject = () => {
     month: '6月',
     followers: 18000
   }];
+  
   const handleDetailClick = () => {
     setOpen(true);
   };
-  return <>
+  
+  return (
+    <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
@@ -424,46 +443,122 @@ const RedBookProject = () => {
         </DialogContent>
       </Dialog>
       
-      <div className="cursor-pointer group mx-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 px-0 mx-[24px]">
-            <h3 className="font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors text-3xl py-[17px]">小红书账号&quot;小选和她的朋友们&quot;</h3>
-            <p className="text-gray-600 mb-4 py-[11px] px-0 mx-0">打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。目前累计阅读量超过2万，是展示选调生工作和延庆生活的重要窗口。</p>
+      <div 
+        ref={animationRef} 
+        className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
+        <div className="flex flex-col md:flex-row gap-6 relative">
+          {/* Left content */}
+          <div className="md:w-1/2 z-10">
+            <h3 className="text-amber-500 text-3xl font-bold mb-4">小红书账号"小选和她的朋友们"</h3>
+            
+            <p className="text-gray-700 mb-6">
+              打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。
+              目前累计阅读量超过2万，是展示选调生工作和延庆生活的重要窗口。
+            </p>
+            
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
+              <span className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
                 #IP运营
               </span>
-              <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
+              <span className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
                 #内容创作
               </span>
-              <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
+              <span className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
                 #延庆宣传
               </span>
             </div>
-            <button onClick={handleDetailClick} className="flex items-center text-activeOrange font-medium group-hover:translate-x-1 transition-transform">
+            
+            <button 
+              onClick={handleDetailClick} 
+              className="flex items-center text-amber-500 font-medium hover:text-amber-600 transition-all group"
+            >
               <span>查看详情</span>
-              <ArrowRight className="h-5 w-5 ml-2" />
+              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
           
-          <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow">
-            <div className="grid grid-cols-2 gap-1 h-full">
-              <div className="col-span-2 aspect-video overflow-hidden bg-gray-100">
-                <img src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" alt="长城风光" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
+          {/* Right content - Images Grid with Animation */}
+          <div className="md:w-1/2 relative">
+            <div className="grid grid-cols-3 gap-3 transform rotate-2 transition-all hover:rotate-0 duration-300">
+              {/* Main image - Great Wall */}
+              <div className="col-span-3 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
+                <img 
+                  src="/lovable-uploads/ec27b2ec-2da7-44b9-88b7-98e65c57bdd3.png" 
+                  alt="长城风光" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                />
               </div>
-              {redBookPosts.slice(0, 2).map((post, idx) => <div key={idx} className="aspect-square overflow-hidden bg-gray-100">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
-                </div>)}
+              
+              {/* Smaller redbook posts in a grid */}
+              <div className="col-span-2 row-span-2 h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all">
+                <Carousel className="w-full h-full">
+                  <CarouselContent className="h-full">
+                    {redBookPosts.slice(0, 3).map((post, idx) => (
+                      <CarouselItem key={idx} className="h-full">
+                        <div className="h-full relative">
+                          <img 
+                            src={post.image} 
+                            alt={post.title} 
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                            <p className="text-white text-sm font-medium">{post.title}</p>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              </div>
+              
+              {/* Floating stats card */}
+              <div className="absolute top-5 right-0 bg-white/95 rounded-lg shadow-lg p-4 transform -translate-y-6 translate-x-4 z-20 w-40 animate-float">
+                <div className="flex flex-col items-center">
+                  <div className="text-green-600 font-bold">
+                    <div className="text-sm text-gray-500">小红书粉丝量</div>
+                    <div className="text-2xl">20000+</div>
+                  </div>
+                  
+                  <div className="mt-3 text-green-600 font-bold">
+                    <div className="text-sm text-gray-500">文物古迹收录</div>
+                    <div className="text-2xl">23处</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Additional small image */}
+              <div className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-48">
+                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center p-2">
+                  <p className="text-xs text-gray-500">小红书1</p>
+                </div>
+              </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-              <div className="w-full p-4 text-white">
-                <p className="font-bold">热门笔记瀑布流</p>
-                <p className="text-sm text-white/80">浏览量累计 100,000+</p>
-              </div>
+            
+            {/* Hot notes overlay */}
+            <div className="absolute bottom-4 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm">
+              <p className="font-bold">热门笔记瀑布流</p>
+              <p className="text-xs text-white/80">浏览量累计 100,000+</p>
             </div>
           </div>
         </div>
+        
+        {/* Project Introduction - Mobile version */}
+        <div className="mt-8 md:hidden">
+          <Card className="bg-gradient-to-r from-amber-50 to-white border-amber-100">
+            <CardContent className="pt-6">
+              <h4 className="text-lg font-semibold text-amber-600 mb-2">"小选和她的朋友们"——延庆文旅的青春故事</h4>
+              <p className="text-gray-600 text-sm">
+                在延庆的青山绿水间，蕴藏许多不为人知的美好角落。如何让这些美景、美食与人文故事被更多人看见？带着这样的初衷，"小选和她的朋友们"诞生了。这是一群选调生以青春之名，为延庆文旅书写的生动注脚。
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default RedBookProject;
