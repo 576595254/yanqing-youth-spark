@@ -191,11 +191,11 @@ const RedBookProject = () => {
           </div>
           
           <Tabs defaultValue="intro" value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid grid-cols-4 w-full mb-6">
+            <TabsList className="grid grid-cols-4 w-full mb-6 mx-0 px-0 rounded-none">
               <TabsTrigger value="intro">项目介绍</TabsTrigger>
-              <TabsTrigger value="posts">热门笔记</TabsTrigger>
-              <TabsTrigger value="stats">数据驾驶舱</TabsTrigger>
-              <TabsTrigger value="plan">内容计划</TabsTrigger>
+              <TabsTrigger value="posts" className="mx-0 text-center px-[29px]">热门笔记</TabsTrigger>
+              
+              
             </TabsList>
             
             <TabsContent value="intro" className="space-y-6">
