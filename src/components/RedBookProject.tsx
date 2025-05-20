@@ -487,7 +487,7 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img alt="长城风光" src="/lovable-uploads/367cd307-0da7-46af-a650-4dd62767ad99.jpg" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" />
+                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" src="/lovable-uploads/9354cd3d-3126-4e63-bab8-84b1cf4a4766.png" />
               </div>
               
               {/* RedBook screenshots in a grid */}
@@ -518,7 +518,7 @@ const RedBookProject = () => {
             <div className="absolute top-5 right-0 bg-white/95 rounded-lg shadow-lg p-4 transform -translate-y-6 translate-x-4 z-20 w-40 animate-float">
               <div className="flex flex-col items-center">
                 <div className="text-green-600 font-bold">
-                  <div className="text-sm text-gray-500">小红书粉丝量</div>
+                  <div className="text-sm text-gray-500">小红书浏览量</div>
                   <div className="text-2xl">20000+</div>
                 </div>
                 
