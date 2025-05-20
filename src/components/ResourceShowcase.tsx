@@ -83,9 +83,7 @@ const EnterpriseResourceMatching = ({
         </div>
         <div className="p-6">
           <h3 className="text-lg font-bold text-gray-800 mb-3">企业资源对接会</h3>
-          <p className="text-gray-600 mb-4">
-            通过搭建企业与基层的对接平台，促进资源共享与合作，为地方发展注入新活力。资源对接会聚集了各行业优质企业资源，助力延庆区域经济发展和产业升级。
-          </p>
+          <p className="text-gray-600 mb-4">通过搭建企业与基层的对接平台，促进资源共享与合作，为地方发展注入新活力。资源对接会聚集了各行业优质企业资源，助力延庆区域经济发展和产业升级。</p>
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-500">2024年3月</span>
             <span className="text-orange-500 text-sm font-medium">50+ 企业参与</span>
