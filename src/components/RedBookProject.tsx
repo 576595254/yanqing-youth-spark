@@ -427,9 +427,7 @@ const RedBookProject = () => {
       <div className="cursor-pointer group mx-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2 px-0 mx-[24px]">
-            <h3 className="font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors text-3xl py-[17px]">
-              小红书账号"小选和她的朋友们"运营
-            </h3>
+            <h3 className="font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors text-3xl py-[17px]">小红书账号&quot;小选和她的朋友们&quot;</h3>
             <p className="text-gray-600 mb-4 py-[11px] px-0 mx-0">打造延庆特色生活内容IP，通过优质的笔记展示延庆自然美景和风土人情。目前累计阅读量超过2万，是展示选调生工作和延庆生活的重要窗口。</p>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
