@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from 'framer-motion';
-import { Building, Video, Play } from 'lucide-react';
+import { Building, Video, Play, School } from 'lucide-react';
+
 const ResourceShowcase = () => {
   const [activeTab, setActiveTab] = useState("enterprise");
   return <div className="mt-10">
@@ -12,6 +13,11 @@ const ResourceShowcase = () => {
               <Building className="w-4 h-4" />
               <span className="hidden sm:inline">企业资源对接会</span>
               <span className="sm:hidden">对接会</span>
+            </TabsTrigger>
+            <TabsTrigger value="university" className="flex items-center gap-2 data-[state=active]:bg-purple-100 data-[state=active]:text-purple-600 py-2 px-4">
+              <School className="w-4 h-4" />
+              <span className="hidden sm:inline">高校共建活动</span>
+              <span className="sm:hidden">高校</span>
             </TabsTrigger>
             <TabsTrigger value="youth-speaks" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-4">
               <Video className="w-4 h-4" />
@@ -28,6 +34,10 @@ const ResourceShowcase = () => {
 
         <TabsContent value="enterprise" className="mt-2">
           <EnterpriseResourceMatching active={activeTab === "enterprise"} />
+        </TabsContent>
+        
+        <TabsContent value="university" className="mt-2">
+          <UniversityCollaboration active={activeTab === "university"} />
         </TabsContent>
         
         <TabsContent value="youth-speaks" className="mt-2">
@@ -121,6 +131,87 @@ const EnterpriseResourceMatching = ({
     </motion.div>;
 };
 
+// Component for University Collaboration Activities
+const UniversityCollaboration = ({
+  active
+}: {
+  active: boolean;
+}) => {
+  const containerVariants = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+  const itemVariants = {
+    hidden: {
+      y: 20,
+      opacity: 0
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+  
+  return <motion.div initial="hidden" animate={active ? "visible" : "hidden"} variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
+          <img src="/lovable-uploads/f8eeaba7-86e0-4f7c-a612-54e126ccd16b.png" alt="高校共建活动现场" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div className="absolute bottom-4 left-4 text-white">
+            <h3 className="text-xl font-bold">高校共建活动</h3>
+            <p className="text-sm opacity-90">走一起·学一起·研一起</p>
+          </div>
+        </div>
+        <div className="p-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-3">延庆区选调生 × 清华博士讲师团</h3>
+          <p className="text-gray-600 mb-4">高校共建活动是延庆区选调生团队与清华大学博士生讲师团合作开展的文化共建活动，以"走一起、学一起、研一起"为核心理念，通过专题讲座、实践考察、互动交流等形式，实现理论与实践的深度融合，促进学术与基层工作的有机结合。</p>
+          <div className="flex justify-between items-center">
+            <span className="text-sm text-gray-500">2023-2024年度</span>
+            <span className="text-purple-500 text-sm font-medium">30+ 参与人次</span>
+          </div>
+        </div>
+      </motion.div>
+      
+      <motion.div variants={itemVariants} className="flex flex-col justify-between">
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h3 className="text-lg font-bold text-gray-800 border-l-4 border-purple-400 pl-3 mb-4">活动成效</h3>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
+              <span className="text-gray-700">开展3场专题学习，涵盖延庆区域历史文化、发展规划等内容</span>
+            </li>
+            <li className="flex items-start">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
+              <span className="text-gray-700">完成2项联合调研报告，就乡村振兴和文旅发展提出创新性建议</span>
+            </li>
+            <li className="flex items-start">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
+              <span className="text-gray-700">建立长期合作机制，形成高校智力支持基层发展的有效路径</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg shadow-sm p-6">
+          <h4 className="text-purple-600 font-medium mb-3">参与者感言</h4>
+          <blockquote className="italic text-gray-700 border-l-2 border-indigo-300 pl-4">
+            "通过此次活动，我们不仅深入了解了延庆的历史文化，更将学术研究与基层实践紧密结合，为乡村振兴贡献了智慧力量。"
+            <footer className="text-sm text-gray-500 mt-2 not-italic">— 清华大学博士研究生</footer>
+          </blockquote>
+        </div>
+      </motion.div>
+    </motion.div>;
+};
+
 // Component for Great Wall Youth Speaks 1
 const GreatWallYouthSpeaks = ({
   active
@@ -203,4 +294,5 @@ const GreatWallYouthSpeaks2 = ({
       </div>
     </div>;
 };
+
 export default ResourceShowcase;
