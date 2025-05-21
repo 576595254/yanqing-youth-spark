@@ -4,8 +4,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import RedBookIntro from './RedBookIntro';
 import RedBookPosts from './RedBookPosts';
-import RedBookStats from './RedBookStats';
-import RedBookPlan from './RedBookPlan';
 
 interface Post {
   id: number;
@@ -15,34 +13,12 @@ interface Post {
   url: string;
 }
 
-interface PlanData {
-  seq: number;
-  period: string;
-  format: string;
-  theme: string;
-  keywords: string;
-  executor: string;
-  team: string;
-}
-
 interface Props {
   open: boolean;
   setOpen: (open: boolean) => void;
   activeTab: string;
   setActiveTab: (tab: string) => void;
   redBookPosts: Post[];
-  contentPlanData: PlanData[];
-  extendedPlanData: PlanData[];
-  stats: {
-    followers: number;
-    posts: number;
-    monthlyViews: number;
-    interaction: number;
-  };
-  trendData: {
-    month: string;
-    followers: number;
-  }[];
   openExternalLink: (url: string) => void;
 }
 
@@ -52,10 +28,6 @@ const RedBookDialog: React.FC<Props> = ({
   activeTab,
   setActiveTab,
   redBookPosts,
-  contentPlanData,
-  extendedPlanData,
-  stats,
-  trendData,
   openExternalLink
 }) => {
   return <Dialog open={open} onOpenChange={setOpen}>
@@ -76,8 +48,6 @@ const RedBookDialog: React.FC<Props> = ({
           <TabsList className="w-full max-w-md mx-auto mb-6">
             <TabsTrigger value="intro" className="flex-1">项目介绍</TabsTrigger>
             <TabsTrigger value="posts" className="flex-1">热门笔记</TabsTrigger>
-            <TabsTrigger value="stats" className="flex-1">账号数据</TabsTrigger>
-            <TabsTrigger value="plan" className="flex-1">运营计划</TabsTrigger>
           </TabsList>
           
           <TabsContent value="intro">
@@ -86,14 +56,6 @@ const RedBookDialog: React.FC<Props> = ({
           
           <TabsContent value="posts">
             <RedBookPosts posts={redBookPosts} openExternalLink={openExternalLink} />
-          </TabsContent>
-          
-          <TabsContent value="stats">
-            <RedBookStats stats={stats} trendData={trendData} />
-          </TabsContent>
-          
-          <TabsContent value="plan">
-            <RedBookPlan contentPlanData={contentPlanData} extendedPlanData={extendedPlanData} />
           </TabsContent>
         </Tabs>
       </DialogContent>

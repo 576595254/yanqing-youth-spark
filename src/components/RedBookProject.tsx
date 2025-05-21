@@ -3,13 +3,7 @@ import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import RedBookDialog from './redbook/RedBookDialog';
 import RedBookPreview from './redbook/RedBookPreview';
-import { 
-  redBookPosts, 
-  contentPlanData, 
-  extendedPlanData, 
-  accountStats, 
-  followerTrendData 
-} from './redbook/data';
+import { redBookPosts } from './redbook/data';
 
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
@@ -38,10 +32,6 @@ const RedBookProject = () => {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         redBookPosts={redBookPosts}
-        contentPlanData={contentPlanData}
-        extendedPlanData={extendedPlanData}
-        stats={accountStats}
-        trendData={followerTrendData}
         openExternalLink={openExternalLink}
       />
       
