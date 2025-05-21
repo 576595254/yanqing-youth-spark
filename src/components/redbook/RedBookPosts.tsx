@@ -30,6 +30,9 @@ const RedBookPosts: React.FC<PostsProps> = ({ posts, openExternalLink }) => {
                 src={post.image} 
                 alt={post.title} 
                 className="w-full h-full transition-transform group-hover:scale-105 duration-500 object-cover" 
+                onError={(e) => {
+                  e.currentTarget.src = "https://placeholder.pics/svg/400x600/DEDEDE/555555/图片加载失败";
+                }}
               />
               <div className="absolute top-3 right-3 bg-black/50 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                 <ExternalLink className="w-4 h-4" />
