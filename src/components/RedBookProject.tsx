@@ -9,25 +9,25 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const redBookPosts = [{
   id: 1,
   title: "延庆夜市City不City啊😎",
-  image: "/lovable-uploads/0ba7a35b-6515-4365-80ed-a78ecc45be3a.png",
+  image: "/lovable-uploads/2e7971c2-1c8b-4e5d-873b-9acc997dd86b.png",
   tags: ["夜市", "延庆美食", "京郊周边"],
   url: "https://www.xiaohongshu.com/discovery/item/669100ce00000000250161a0"
 }, {
   id: 2,
   title: "我在延庆的周末VLOG🔆",
-  image: "/lovable-uploads/cb58af7c-e599-4bee-813d-4c59b04f24a2.png",
+  image: "/lovable-uploads/407b7efe-0d26-4076-baac-f89f69fd3982.png",
   tags: ["延庆周末", "周末出游", "VLOG"],
   url: "https://www.xiaohongshu.com/discovery/item/676be80e0000000009014ce3"
 }, {
   id: 3,
   title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
-  image: "/lovable-uploads/6e25ce4c-bf75-4380-95df-91d39f421d26.png",
+  image: "/lovable-uploads/4dbc2abf-99b0-4d26-a675-b6329ff3e279.png",
   tags: ["徒步路线", "长城", "京郊旅游"],
   url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
 }, {
   id: 4,
   title: "延庆土著私藏‼从小吃到大的3家神级小馆",
-  image: "/lovable-uploads/54e367a5-9861-42aa-99d1-d763829cb819.png",
+  image: "/lovable-uploads/277ebb54-e547-4e26-b22f-dabca55c44a5.png",
   tags: ["延庆美食", "私藏美食", "美食推荐"],
   url: "https://www.xiaohongshu.com/discovery/item/67dae2b2000000001b03cf3a"
 }];
