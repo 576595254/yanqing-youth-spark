@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from 'framer-motion';
@@ -163,7 +164,7 @@ const UniversityCollaboration = ({
   return <motion.div initial="hidden" animate={active ? "visible" : "hidden"} variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <motion.div variants={itemVariants} className="bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="relative h-64 overflow-hidden">
-          <img src="/lovable-uploads/f8eeaba7-86e0-4f7c-a612-54e126ccd16b.png" alt="高校共建活动现场" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+          <img src="/lovable-uploads/3c1eb298-6103-40e8-9d47-c87687cd8c92.png" alt="高校共建活动现场" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div className="absolute bottom-4 left-4 text-white">
             <h3 className="text-xl font-bold">高校共建活动</h3>
@@ -190,7 +191,7 @@ const UniversityCollaboration = ({
             </li>
             <li className="flex items-start">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
-              <span className="text-gray-700">实地考察窑湾村“百千工程”建设情况、非遗工作室、乡情村史陈列室和富春山居民宿，开展交流研讨</span>
+              <span className="text-gray-700">实地考察窑湾村"百千工程"建设情况、非遗工作室、乡情村史陈列室和富春山居民宿，开展交流研讨</span>
             </li>
             <li className="flex items-start">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
