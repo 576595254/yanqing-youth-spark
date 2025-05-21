@@ -499,7 +499,7 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" src="/lovable-uploads/9354cd3d-3126-4e63-bab8-84b1cf4a4766.png" />
+                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" src="/lovable-uploads/1da3dab7-624f-434c-bb45-bf576bd3b699.png" />
               </div>
               
               {/* RedBook screenshots in a grid */}
@@ -516,7 +516,7 @@ const RedBookProject = () => {
               <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{
               animationDelay: "1.5s"
             }}>
-                <img src="/lovable-uploads/ccb6dbce-175a-4df3-9130-333395b40c03.png" alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" />
+                <img src="/lovable-uploads/0ba7a35b-6515-4365-80ed-a78ecc45be3a.png" alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
               
               <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{

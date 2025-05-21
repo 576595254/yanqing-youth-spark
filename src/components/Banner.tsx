@@ -1,13 +1,17 @@
+
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+
 const Banner = () => {
   const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 300);
     return () => clearTimeout(timer);
   }, []);
+
   const scrollToProjects = () => {
     const projectsSection = document.querySelector('#projects');
     if (projectsSection) {
@@ -16,10 +20,11 @@ const Banner = () => {
       });
     }
   };
+
   return <div className="relative h-screen w-full overflow-hidden">
       {/* Banner background with Great Wall landscape */}
       <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{
-      backgroundImage: "url('/lovable-uploads/bc603a8a-62e3-46bc-a789-36aa31aee13b.png')"
+      backgroundImage: "url('/lovable-uploads/1da3dab7-624f-434c-bb45-bf576bd3b699.png')"
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60"></div>
       </div>
@@ -58,4 +63,5 @@ const Banner = () => {
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
     </div>;
 };
+
 export default Banner;
