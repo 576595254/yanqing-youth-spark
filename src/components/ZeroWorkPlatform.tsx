@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 const ZeroWorkPlatform = () => {
   const stats = {
     registeredUsers: 647,
@@ -54,17 +52,11 @@ const ZeroWorkPlatform = () => {
     status: "已结算",
     wage: 3400
   }];
-  
-  return (
-    <div className="group">
+  return <div className="group">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
           <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
-            <img 
-              alt="零用工平台Logo" 
-              className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" 
-              src="/lovable-uploads/891d6bbe-0b48-4bf8-b2c1-791cbfa8b1da.jpg" 
-            />
+            <img alt="零用工平台Logo" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" src="/lovable-uploads/891d6bbe-0b48-4bf8-b2c1-791cbfa8b1da.jpg" />
           </div>
         </div>
         
@@ -72,7 +64,7 @@ const ZeroWorkPlatform = () => {
           <h3 className="text-2xl font-bold text-yanqingGreen mb-4 group-hover:text-activeOrange transition-colors">
             零用工平台
           </h3>
-          <p className="text-gray-600 mb-4">旨在助力解决延庆区农村劳动力&quot;就业难&quot;与企业&quot;用工难&quot;的双重问题，智能匹配乡村闲置劳动力与用工需求，与零工市场对接。</p>
+          <p className="text-gray-600 mb-4">项目设想旨在助力解决延庆区农村劳动力"就业难"与企业"用工难"的双重问题，智能匹配乡村闲置劳动力与用工需求，与零工市场对接。目前在前期策划中。</p>
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="bg-gray-100 text-yanqingGreen px-3 py-1 rounded-full text-sm">
               #灵活就业
@@ -87,8 +79,6 @@ const ZeroWorkPlatform = () => {
           
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ZeroWorkPlatform;
