@@ -24,7 +24,7 @@ const Banner = () => {
   return <div className="relative h-screen w-full overflow-hidden">
       {/* Banner background with Great Wall landscape */}
       <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{
-      backgroundImage: "url('/lovable-uploads/1da3dab7-624f-434c-bb45-bf576bd3b699.png')"
+      backgroundImage: "url('/lovable-uploads/9ef36454-5a9f-4d95-b0b8-c9b9d11653ac.png')"
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60"></div>
       </div>
