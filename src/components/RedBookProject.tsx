@@ -1,44 +1,55 @@
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award } from 'lucide-react';
+import { ArrowRight, Calendar, Heart, MessageSquare, Eye, Award, ExternalLink } from 'lucide-react';
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { useInView } from 'react-intersection-observer';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-const redBookPosts = [{
-  id: 1,
-  title: "探访延庆世园会遗址公园",
-  image: "/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png",
-  likes: 328,
-  comments: 42,
-  views: 12580,
-  tags: ["延庆风光", "世园会", "旅游推荐"]
-}, {
-  id: 2,
-  title: "零用工平台入户调研实录",
-  image: "/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png",
-  likes: 256,
-  comments: 37,
-  views: 9650,
-  tags: ["乡村振兴", "零用工", "基层工作"]
-}, {
-  id: 3,
-  title: "延庆非遗面人技艺传承人专访",
-  image: "/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png",
-  likes: 412,
-  comments: 67,
-  views: 15320,
-  tags: ["非物质文化遗产", "传统技艺", "延庆文化"]
-}, {
-  id: 4,
-  title: "北京延庆夜市合集",
-  image: "/lovable-uploads/de705909-cce1-48d6-a9e4-29c35f0fe7d0.png",
-  likes: 486,
-  comments: 57,
-  views: 18720,
-  tags: ["延庆美食", "夜市", "美食攻略"]
-}];
+
+const redBookPosts = [
+  {
+    id: 1,
+    title: "延庆夜市City不City啊😎",
+    image: "/lovable-uploads/de705909-cce1-48d6-a9e4-29c35f0fe7d0.png",
+    likes: 328,
+    comments: 42,
+    views: 12580,
+    tags: ["夜市", "延庆美食", "京郊周边"],
+    url: "https://www.xiaohongshu.com/discovery/item/669100ce00000000250161a0"
+  },
+  {
+    id: 2,
+    title: "我在延庆的周末VLOG🔆",
+    image: "/lovable-uploads/c35f183a-d9f1-44bf-b911-54d049f4aac6.png",
+    likes: 256,
+    comments: 96,
+    views: 9650,
+    tags: ["延庆周末", "周末出游", "VLOG"],
+    url: "https://www.xiaohongshu.com/discovery/item/676be80e0000000009014ce3"
+  },
+  {
+    id: 3,
+    title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
+    image: "/lovable-uploads/992f8713-6679-4558-a19c-69c64d05185e.png",
+    likes: 412,
+    comments: 74,
+    views: 15320,
+    tags: ["徒步路线", "长城", "京郊旅游"],
+    url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
+  },
+  {
+    id: 4,
+    title: "延庆土著私藏‼从小吃到大的3家神级小馆",
+    image: "/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png",
+    likes: 486,
+    comments: 58,
+    views: 18720,
+    tags: ["延庆美食", "私藏美食", "美食推荐"],
+    url: "https://www.xiaohongshu.com/discovery/item/67dae2b2000000001b03cf3a"
+  }
+];
+
 const contentPlanData = [{
   seq: 1,
   period: "7月上旬",
@@ -140,6 +151,7 @@ const extendedPlanData = [{
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
+  
   const {
     ref: animationRef,
     inView
@@ -147,34 +159,44 @@ const RedBookProject = () => {
     triggerOnce: true,
     threshold: 0.1
   });
+  
   const stats = {
     followers: 20000,
     posts: 87,
     monthlyViews: 100000,
     interaction: 4.8
   };
-  const trendData = [{
-    month: '1月',
-    followers: 12500
-  }, {
-    month: '2月',
-    followers: 13200
-  }, {
-    month: '3月',
-    followers: 14800
-  }, {
-    month: '4月',
-    followers: 16300
-  }, {
-    month: '5月',
-    followers: 17600
-  }, {
-    month: '6月',
-    followers: 18000
-  }];
+  
+  const trendData = [
+    {
+      month: '1月',
+      followers: 12500
+    }, {
+      month: '2月',
+      followers: 13200
+    }, {
+      month: '3月',
+      followers: 14800
+    }, {
+      month: '4月',
+      followers: 16300
+    }, {
+      month: '5月',
+      followers: 17600
+    }, {
+      month: '6月',
+      followers: 18000
+    }
+  ];
+  
   const handleDetailClick = () => {
     setOpen(true);
   };
+  
+  const openExternalLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
@@ -191,14 +213,12 @@ const RedBookProject = () => {
           </div>
           
           <Tabs defaultValue="intro" value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid grid-cols-4 w-full mb-6 mx-0 px-0 rounded-none">
-              <TabsTrigger value="intro">项目介绍</TabsTrigger>
-              <TabsTrigger value="posts" className="mx-0 text-center px-[29px]">热门笔记</TabsTrigger>
-              
-              
+            <TabsList className="w-full max-w-md mx-auto mb-6">
+              <TabsTrigger value="intro" className="flex-1">项目介绍</TabsTrigger>
+              <TabsTrigger value="posts" className="flex-1">热门笔记</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="intro" className="space-y-6">
+            <TabsContent value="intro" className="space-y-6 mx-auto max-w-4xl">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <article className="space-y-6">
                   <div className="relative pl-5 border-l-4 border-amber-400">
@@ -272,30 +292,44 @@ const RedBookProject = () => {
               </div>
             </TabsContent>
             
-            <TabsContent value="posts" className="p-1">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {redBookPosts.map(post => <div key={post.id} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
-                    <div className="aspect-[3/4] overflow-hidden">
-                      <img src={post.image} alt={post.title} className="w-full h-full transition-transform hover:scale-105 duration-300 object-cover" />
+            <TabsContent value="posts" className="p-1 mx-auto max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {redBookPosts.map(post => (
+                  <div key={post.id} 
+                       onClick={() => openExternalLink(post.url)} 
+                       className="border rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300 bg-white cursor-pointer group"
+                  >
+                    <div className="aspect-[3/4] overflow-hidden relative">
+                      <img 
+                        src={post.image} 
+                        alt={post.title} 
+                        className="w-full h-full transition-transform group-hover:scale-105 duration-500 object-cover" 
+                      />
+                      <div className="absolute top-3 right-3 bg-black/50 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ExternalLink className="w-4 h-4" />
+                      </div>
                     </div>
                     <div className="p-4">
-                      <h4 className="font-bold text-lg mb-2">{post.title}</h4>
+                      <h4 className="font-bold text-lg mb-2 group-hover:text-amber-500 transition-colors">{post.title}</h4>
                       <div className="flex justify-between text-sm text-gray-500 mb-3">
                         <span className="flex items-center"><Heart className="w-4 h-4 mr-1" /> {post.likes}</span>
                         <span className="flex items-center"><MessageSquare className="w-4 h-4 mr-1" /> {post.comments}</span>
                         <span className="flex items-center"><Eye className="w-4 h-4 mr-1" /> {post.views}</span>
                       </div>
                       <div className="flex flex-wrap gap-1">
-                        {post.tags.map((tag, idx) => <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">
+                        {post.tags.map((tag, idx) => (
+                          <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
                             #{tag}
-                          </span>)}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </TabsContent>
             
-            <TabsContent value="stats" className="space-y-6">
+            <TabsContent value="stats" className="space-y-6 mx-auto max-w-4xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white rounded-lg p-4 shadow-sm text-center">
                   <h4 className="text-sm text-gray-500">粉丝数</h4>
@@ -369,7 +403,7 @@ const RedBookProject = () => {
               </div>
             </TabsContent>
             
-            <TabsContent value="plan" className="space-y-6">
+            <TabsContent value="plan" className="space-y-6 mx-auto max-w-4xl">
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <h4 className="text-lg font-bold mb-4 flex items-center">
                   <Calendar className="h-5 w-5 mr-2 text-yanqingGreen" />
@@ -508,9 +542,6 @@ const RedBookProject = () => {
                 <img src="/lovable-uploads/5ec1b8d6-523c-47a0-a427-67d2f394cd41.png" alt="评论区" className="h-full w-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
-            
-            {/* Floating stats card */}
-            
             
             {/* Hot notes overlay */}
             <div className="absolute bottom-4 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm z-20">
