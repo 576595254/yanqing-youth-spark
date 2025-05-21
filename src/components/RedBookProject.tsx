@@ -6,38 +6,31 @@ import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { useInView } from 'react-intersection-observer';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
-const redBookPosts = [
-  {
-    id: 1,
-    title: "延庆夜市City不City啊😎",
-    image: "/lovable-uploads/0ba7a35b-6515-4365-80ed-a78ecc45be3a.png",
-    tags: ["夜市", "延庆美食", "京郊周边"],
-    url: "https://www.xiaohongshu.com/discovery/item/669100ce00000000250161a0"
-  },
-  {
-    id: 2,
-    title: "我在延庆的周末VLOG🔆",
-    image: "/lovable-uploads/cb58af7c-e599-4bee-813d-4c59b04f24a2.png",
-    tags: ["延庆周末", "周末出游", "VLOG"],
-    url: "https://www.xiaohongshu.com/discovery/item/676be80e0000000009014ce3"
-  },
-  {
-    id: 3,
-    title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
-    image: "/lovable-uploads/6e25ce4c-bf75-4380-95df-91d39f421d26.png",
-    tags: ["徒步路线", "长城", "京郊旅游"],
-    url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
-  },
-  {
-    id: 4,
-    title: "延庆土著私藏‼从小吃到大的3家神级小馆",
-    image: "/lovable-uploads/54e367a5-9861-42aa-99d1-d763829cb819.png",
-    tags: ["延庆美食", "私藏美食", "美食推荐"],
-    url: "https://www.xiaohongshu.com/discovery/item/67dae2b2000000001b03cf3a"
-  }
-];
-
+const redBookPosts = [{
+  id: 1,
+  title: "延庆夜市City不City啊😎",
+  image: "/lovable-uploads/0ba7a35b-6515-4365-80ed-a78ecc45be3a.png",
+  tags: ["夜市", "延庆美食", "京郊周边"],
+  url: "https://www.xiaohongshu.com/discovery/item/669100ce00000000250161a0"
+}, {
+  id: 2,
+  title: "我在延庆的周末VLOG🔆",
+  image: "/lovable-uploads/cb58af7c-e599-4bee-813d-4c59b04f24a2.png",
+  tags: ["延庆周末", "周末出游", "VLOG"],
+  url: "https://www.xiaohongshu.com/discovery/item/676be80e0000000009014ce3"
+}, {
+  id: 3,
+  title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
+  image: "/lovable-uploads/6e25ce4c-bf75-4380-95df-91d39f421d26.png",
+  tags: ["徒步路线", "长城", "京郊旅游"],
+  url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
+}, {
+  id: 4,
+  title: "延庆土著私藏‼从小吃到大的3家神级小馆",
+  image: "/lovable-uploads/54e367a5-9861-42aa-99d1-d763829cb819.png",
+  tags: ["延庆美食", "私藏美食", "美食推荐"],
+  url: "https://www.xiaohongshu.com/discovery/item/67dae2b2000000001b03cf3a"
+}];
 const contentPlanData = [{
   seq: 1,
   period: "7月上旬",
@@ -139,7 +132,6 @@ const extendedPlanData = [{
 const RedBookProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("intro");
-  
   const {
     ref: animationRef,
     inView
@@ -147,44 +139,37 @@ const RedBookProject = () => {
     triggerOnce: true,
     threshold: 0.1
   });
-  
   const stats = {
     followers: 20000,
     posts: 87,
     monthlyViews: 100000,
     interaction: 4.8
   };
-  
-  const trendData = [
-    {
-      month: '1月',
-      followers: 12500
-    }, {
-      month: '2月',
-      followers: 13200
-    }, {
-      month: '3月',
-      followers: 14800
-    }, {
-      month: '4月',
-      followers: 16300
-    }, {
-      month: '5月',
-      followers: 17600
-    }, {
-      month: '6月',
-      followers: 18000
-    }
-  ];
-  
+  const trendData = [{
+    month: '1月',
+    followers: 12500
+  }, {
+    month: '2月',
+    followers: 13200
+  }, {
+    month: '3月',
+    followers: 14800
+  }, {
+    month: '4月',
+    followers: 16300
+  }, {
+    month: '5月',
+    followers: 17600
+  }, {
+    month: '6月',
+    followers: 18000
+  }];
   const handleDetailClick = () => {
     setOpen(true);
   };
-  
-  const openExternalLink = (url) => {
+  const openExternalLink = url => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
-
   return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
@@ -282,17 +267,9 @@ const RedBookProject = () => {
             
             <TabsContent value="posts" className="p-1 mx-auto max-w-4xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {redBookPosts.map(post => (
-                  <div key={post.id} 
-                       onClick={() => openExternalLink(post.url)} 
-                       className="border rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300 bg-white cursor-pointer group"
-                  >
+                {redBookPosts.map(post => <div key={post.id} onClick={() => openExternalLink(post.url)} className="border rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300 bg-white cursor-pointer group">
                     <div className="aspect-[3/4] overflow-hidden relative">
-                      <img 
-                        src={post.image} 
-                        alt={post.title} 
-                        className="w-full h-full transition-transform group-hover:scale-105 duration-500 object-cover" 
-                      />
+                      <img src={post.image} alt={post.title} className="w-full h-full transition-transform group-hover:scale-105 duration-500 object-cover" />
                       <div className="absolute top-3 right-3 bg-black/50 text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                         <ExternalLink className="w-4 h-4" />
                       </div>
@@ -300,15 +277,12 @@ const RedBookProject = () => {
                     <div className="p-4">
                       <h4 className="font-bold text-lg mb-4 group-hover:text-amber-500 transition-colors">{post.title}</h4>
                       <div className="flex flex-wrap gap-1">
-                        {post.tags.map((tag, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
+                        {post.tags.map((tag, idx) => <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs group-hover:bg-amber-50 group-hover:text-amber-600 transition-colors">
                             #{tag}
-                          </span>
-                        ))}
+                          </span>)}
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </TabsContent>
             
@@ -499,30 +473,30 @@ const RedBookProject = () => {
             <div className="grid grid-cols-6 gap-3">
               {/* Main image - Great Wall */}
               <div className="col-span-6 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all h-40 relative">
-                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" src="/lovable-uploads/1da3dab7-624f-434c-bb45-bf576bd3b699.png" />
+                <img alt="长城风光" className="w-full h-full object-cover transition-transform hover:scale-110 duration-500" src="/lovable-uploads/45199c7e-f65a-4d73-9de3-b367f056aaae.png" />
               </div>
               
               {/* RedBook screenshots in a grid */}
               <div className="col-span-3 h-64 relative animate-float">
-                <img src="/lovable-uploads/cb58af7c-e599-4bee-813d-4c59b04f24a2.png" alt="夜市合集" className="h-full w-full object-cover rounded-lg shadow-lg" />
+                <img alt="夜市合集" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/e5dd07b6-77a5-41ea-afba-cbef1a85bf58.png" />
               </div>
               
               <div className="col-span-3 h-64 relative translate-y-4 animate-float" style={{
               animationDelay: "1s"
             }}>
-                <img src="/lovable-uploads/6e25ce4c-bf75-4380-95df-91d39f421d26.png" alt="徒步路线" className="h-full w-full object-cover rounded-lg shadow-lg" />
+                <img alt="徒步路线" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/89f3b0ab-d7b0-4e8d-9707-96bd9244062b.jpg" />
               </div>
               
               <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{
               animationDelay: "1.5s"
             }}>
-                <img src="/lovable-uploads/0ba7a35b-6515-4365-80ed-a78ecc45be3a.png" alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" />
+                <img alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg" />
               </div>
               
               <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{
               animationDelay: "0.5s"
             }}>
-                <img src="/lovable-uploads/54e367a5-9861-42aa-99d1-d763829cb819.png" alt="评论区" className="h-full w-full object-cover rounded-lg shadow-lg" />
+                <img alt="评论区" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/4c2ee652-3013-46ac-b1d5-8e0766f04be0.jpg" />
               </div>
             </div>
             
