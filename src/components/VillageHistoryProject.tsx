@@ -142,23 +142,7 @@ const VillageHistoryProject = () => {
             </TabsContent>
             
             <TabsContent value="map" className="p-1 space-y-6">
-              <div className="relative w-full h-80 bg-gray-200 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-gray-500">
-                    此处将嵌入延庆区地图，显示文物古迹点位
-                    <br />
-                    （实际项目中将集成地图API）
-                  </p>
-                  
-                  {/* Map markers - in real implementation these would be positioned on a real map */}
-                  {villageData.map((location, idx) => <div key={idx} className={`absolute w-6 h-6 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ${selectedLocation === location.id ? 'bg-activeOrange scale-125 z-20' : 'bg-yanqingGreen hover:bg-activeOrange'}`} style={{
-                  top: `${10 + idx * 20}%`,
-                  left: `${15 + idx * 20}%`
-                }} onClick={() => handleLocationClick(location.id)}>
-                      <span className="text-white text-xs font-bold">{idx + 1}</span>
-                    </div>)}
-                </div>
-              </div>
+              
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {villageData.map(location => <div key={location.id} className={`border rounded-lg overflow-hidden shadow-sm transition-all duration-300 ${selectedLocation === location.id ? 'ring-2 ring-activeOrange scale-[1.02]' : 'hover:shadow-md'}`} onClick={() => handleLocationClick(location.id)}>
