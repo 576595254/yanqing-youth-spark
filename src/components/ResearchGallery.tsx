@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -113,7 +114,7 @@ const ResearchGallery = () => {
                     <img 
                       src={report.image} 
                       alt={report.title}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                       onError={(e) => {
                         e.currentTarget.src = "https://placeholder.pics/svg/400x200/DEDEDE/555555/研究报告";
                       }}
