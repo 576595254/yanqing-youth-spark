@@ -1,4 +1,3 @@
-
 // Data constants for RedBook project
 
 export const redBookPosts = [{
@@ -16,7 +15,7 @@ export const redBookPosts = [{
 }, {
   id: 3,
   title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
-  image: "/lovable-uploads/094aa6dc-ad0a-4e6a-8df9-e74b62518d86.png",
+  image: "/lovable-uploads/184cd48a-13cf-4699-a76c-9b647664425e.png",
   tags: ["徒步路线", "长城", "京郊旅游"],
   url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
 }, {
