@@ -6,7 +6,6 @@ import StatsSidebar from '@/components/StatsSidebar';
 import ProjectManagement from '@/components/ProjectManagement';
 import ManagementSystem from '@/components/ManagementSystem';
 import ResourceShowcase from '@/components/ResourceShowcase';
-import ResearchGallery from '@/components/ResearchGallery';
 
 const Index = () => {
   useEffect(() => {
@@ -53,9 +52,7 @@ const Index = () => {
         <section id="research" className="py-20 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl text-yanqingGreen mb-16 py-[25px] font-bold md:text-5xl">调研报告</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-12">此部分将展示各类调研报告与研究成果。</p>
-            
-            <ResearchGallery />
+            <p className="text-gray-600 max-w-2xl mx-auto pb-20">此部分将展示各类调研报告与研究成果。</p>
           </div>
         </section>
       </main>
