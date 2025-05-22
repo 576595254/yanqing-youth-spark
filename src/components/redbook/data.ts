@@ -15,13 +15,13 @@ export const redBookPosts = [{
 }, {
   id: 3,
   title: "长城脚下的秘境之地⛰|京郊小众徒步路线",
-  image: "/lovable-uploads/89f3b0ab-d7b0-4e8d-9707-96bd9244062b.jpg",
+  image: "/lovable-uploads/bfb8f9de-45c4-4357-a14b-c67742997086.png",
   tags: ["徒步路线", "长城", "京郊旅游"],
   url: "https://www.xiaohongshu.com/discovery/item/6630a946000000001e033d61"
 }, {
   id: 4,
   title: "延庆土著私藏‼从小吃到大的3家神级小馆",
-  image: "/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg",
+  image: "/lovable-uploads/3133b2cd-523e-4120-8453-37d1051f5beb.png",
   tags: ["延庆美食", "私藏美食", "美食推荐"],
   url: "https://www.xiaohongshu.com/discovery/item/67dae2b2000000001b03cf3a"
 }];
