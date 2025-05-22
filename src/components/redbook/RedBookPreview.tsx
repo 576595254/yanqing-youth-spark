@@ -1,16 +1,15 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
-
 interface Props {
   handleDetailClick: () => void;
   inView: boolean;
 }
-
-const RedBookPreview: React.FC<Props> = ({ handleDetailClick, inView }) => {
-  return (
-    <div className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+const RedBookPreview: React.FC<Props> = ({
+  handleDetailClick,
+  inView
+}) => {
+  return <div className={`bg-white rounded-xl p-8 shadow-lg transition-all duration-700 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left content */}
         <div className="md:w-1/2 z-10 px-0">
@@ -52,13 +51,13 @@ const RedBookPreview: React.FC<Props> = ({ handleDetailClick, inView }) => {
             <div className="col-span-3 h-64 relative translate-y-4 animate-float" style={{
             animationDelay: "1s"
           }}>
-              <img alt="徒步路线" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/89f3b0ab-d7b0-4e8d-9707-96bd9244062b.jpg" />
+              <img alt="徒步路线" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/bfb8f9de-45c4-4357-a14b-c67742997086.png" />
             </div>
             
             <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{
             animationDelay: "1.5s"
           }}>
-              <img alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg" />
+              <img alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/3133b2cd-523e-4120-8453-37d1051f5beb.png" />
             </div>
             
             <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{
@@ -87,8 +86,6 @@ const RedBookPreview: React.FC<Props> = ({ handleDetailClick, inView }) => {
           </CardContent>
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default RedBookPreview;
