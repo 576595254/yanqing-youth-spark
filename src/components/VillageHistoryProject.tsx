@@ -171,12 +171,12 @@ const VillageHistoryProject = () => {
           
           <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-shadow order-1 md:order-2">
             <div className="aspect-[4/3]">
-              <img src="/lovable-uploads/03bd8dd8-b2fb-4c4e-b5dc-d98e5d59055e.png" alt="延庆文物古迹地图" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
+              <img src="/lovable-uploads/e38bff2f-1797-42bc-b548-660ecf1945c6.png" alt="北京古籍历史文献" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
               <div className="w-full p-4 text-white">
                 <p className="font-bold">延庆区文物古迹地图</p>
-                <p className="text-sm text-white/80">已标记45处历史点位</p>
+                <p className="text-sm text-white/80">已标记23处历史点位</p>
               </div>
             </div>
           </div>
