@@ -17,9 +17,7 @@ const ManagementSystem = () => {
             管理<span className="text-activeOrange">制度</span>
           </h2>
           
-          <p className="text-gray-600 text-lg py-[16px] mx-[8px]">
-            此部分展示延庆区选调生团队管理制度、考核办法等内容，以电子手册形式呈现
-          </p>
+          <p className="text-gray-600 text-lg py-[16px] mx-[8px]">此部分展示延庆区选调生团队管理制度、工作方法等内容，以电子手册形式呈现</p>
         </div>
         
         <div className="max-w-5xl mx-auto" data-aos="fade-up">
