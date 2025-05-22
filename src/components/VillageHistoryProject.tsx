@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+
 const villageData = [{
   id: 1,
   name: "岔道古城",
@@ -35,35 +37,7 @@ const villageData = [{
   coordinates: [115.9876, 40.5123],
   discoveryDate: "2024-01-18"
 }];
-const timelineEvents = [{
-  date: "2023年5月",
-  title: "项目启动",
-  description: "成立'寻找村落中的历史记忆'项目组"
-}, {
-  date: "2023年7-8月",
-  title: "田野调查",
-  description: "完成延庆区17个乡镇的初步走访"
-}, {
-  date: "2023年9-10月",
-  title: "文献整理",
-  description: "收集整理历史资料与口述史"
-}, {
-  date: "2023年11月",
-  title: "专家会诊",
-  description: "邀请北京史学专家进行文物鉴定"
-}, {
-  date: "2024年1月",
-  title: "数据建库",
-  description: "建立延庆区文物古迹数据库"
-}, {
-  date: "2024年3月",
-  title: "成果展览",
-  description: "在区文化中心举办成果展"
-}, {
-  date: "2024年5月",
-  title: "手册出版",
-  description: "《延庆村落历史记忆》手册出版"
-}];
+
 const treasureImages = [{
   src: "/lovable-uploads/3b6826c4-ff45-46e8-8849-4d5c4e491990.png",
   alt: "延庆古城墙遗址",
@@ -73,6 +47,7 @@ const treasureImages = [{
   alt: "延庆历史文献资料",
   caption: "延庆历史文献资料"
 }];
+
 const VillageHistoryProject = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
@@ -82,20 +57,20 @@ const VillageHistoryProject = () => {
   const handleLocationClick = (id: number) => {
     setSelectedLocation(id === selectedLocation ? null : id);
   };
+
   return <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             
             <DialogTitle className="text-center px-[12px] py-[19px] text-4xl">寻找村落中的历史记忆</DialogTitle>
-            <DialogDescription className="text-center">这些承载着地域文明的 “活化石”，亟待被重新看见。</DialogDescription>
+            <DialogDescription className="text-center">这些承载着地域文明的 "活化石"，亟待被重新看见。</DialogDescription>
           </DialogHeader>
           
           <Tabs defaultValue="overview" value={activeTab} onValueChange={setActiveTab} className="w-full mt-4">
-            <TabsList className="grid grid-cols-3 w-full mb-6">
+            <TabsList className="grid grid-cols-2 w-full mb-6">
               <TabsTrigger value="overview">项目概述</TabsTrigger>
-              <TabsTrigger value="map">文物地图</TabsTrigger>
-              <TabsTrigger value="timeline">项目时间线</TabsTrigger>
+              <TabsTrigger value="map">古迹示例</TabsTrigger>
             </TabsList>
             
             <TabsContent value="overview" className="p-1 space-y-6">
@@ -135,7 +110,7 @@ const VillageHistoryProject = () => {
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-yanqingGreen mb-4 mx-[19px]">未来成果运用</h3>
                   <div className="p-4 border rounded-lg">
-                    <p className="text-gray-700">未来我们将通过编纂《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。 同时，上线的百度词条等，让这些文化遗产突破地理边界，成为全网可查的 “延庆文化名片”。</p>
+                    <p className="text-gray-700">未来我们将通过编纂《延庆村落历史记忆》手册，作为延庆区历史文化保护的重要资料。 同时，上线的百度词条等，让这些文化遗产突破地理边界，成为全网可查的 "延庆文化名片"。</p>
                   </div>
                 </div>
               </div>
@@ -162,45 +137,6 @@ const VillageHistoryProject = () => {
                       </div>
                     </div>
                   </div>)}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="timeline" className="relative p-1">
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
-              <div className="relative space-y-8 py-4">
-                {timelineEvents.map((event, idx) => <div key={idx} className={`flex items-start ${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`w-1/2 ${idx % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                      <div className="bg-white shadow-md rounded-lg p-4 transition-all hover:shadow-lg hover:-translate-y-1" style={{
-                    animationDelay: `${idx * 200}ms`
-                  }}>
-                        <h4 className="text-yanqingGreen font-bold">{event.title}</h4>
-                        <p className="text-gray-600 text-sm">{event.description}</p>
-                      </div>
-                    </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-                      <div className="w-4 h-4 bg-activeOrange rounded-full border-4 border-white"></div>
-                      <div className="text-xs font-medium text-gray-500 mt-1">{event.date}</div>
-                    </div>
-                    <div className="w-1/2"></div>
-                  </div>)}
-              </div>
-              
-              <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-                <h3 className="font-bold text-lg mb-4 text-center">项目成果</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-yanqingGreen">45</div>
-                    <p className="text-sm text-gray-500">发现文物古迹点</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-yanqingGreen">127</div>
-                    <p className="text-sm text-gray-500">收集口述历史</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="text-3xl font-bold text-yanqingGreen">1000+</div>
-                    <p className="text-sm text-gray-500">历史照片扫描</p>
-                  </div>
-                </div>
               </div>
             </TabsContent>
           </Tabs>
@@ -248,4 +184,5 @@ const VillageHistoryProject = () => {
       </div>
     </>;
 };
+
 export default VillageHistoryProject;
