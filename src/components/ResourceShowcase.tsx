@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from 'framer-motion';
@@ -9,22 +8,22 @@ const ResourceShowcase = () => {
       <Tabs defaultValue="enterprise" onValueChange={setActiveTab} className="w-full">
         <div className="flex justify-center mb-10">
           <TabsList className="bg-white/90 border p-1 shadow-md">
-            <TabsTrigger value="enterprise" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-4">
+            <TabsTrigger value="enterprise" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-[4px]">
               <Building className="w-4 h-4" />
               <span className="hidden sm:inline">企业资源对接会</span>
               <span className="sm:hidden">对接会</span>
             </TabsTrigger>
-            <TabsTrigger value="university" className="flex items-center gap-2 data-[state=active]:bg-purple-100 data-[state=active]:text-purple-600 py-2 px-4">
+            <TabsTrigger value="university" className="flex items-center gap-2 data-[state=active]:bg-purple-100 data-[state=active]:text-purple-600 py-2 mx-0 px-[6px]">
               <School className="w-4 h-4" />
               <span className="hidden sm:inline">高校共建活动</span>
               <span className="sm:hidden">高校</span>
             </TabsTrigger>
-            <TabsTrigger value="youth-speaks" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-4">
+            <TabsTrigger value="youth-speaks" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-[7px]">
               <Video className="w-4 h-4" />
               <span className="hidden sm:inline">长城青年说</span>
-              <span className="sm:hidden">青年说</span>
+              <span className="sm:hidden px-0">青年说</span>
             </TabsTrigger>
-            <TabsTrigger value="youth-speaks-2" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-4">
+            <TabsTrigger value="youth-speaks-2" className="flex items-center gap-2 data-[state=active]:bg-orange-100 data-[state=active]:text-orange-600 py-2 px-[4px]">
               <Video className="w-4 h-4" />
               <span className="hidden sm:inline">长城青年说2</span>
               <span className="sm:hidden">青年说2</span>
