@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -21,20 +20,20 @@ interface ResearchReport {
 const researchReports: ResearchReport[] = [
   {
     id: 1,
-    title: ""电商直播+"拓展乡村振兴新路径",
+    title: '"电商直播+"拓展乡村振兴新路径',
     description: "探索电商直播如何为乡村振兴注入新活力，分析实际案例和有效模式",
     image: "/lovable-uploads/2287f9c3-90e7-48e2-8807-5a2dc5b66d53.png"
   },
   {
     id: 2,
-    title: ""两山"转化助推农村集体经济发展的思考与研究",
+    title: '"两山"转化助推农村集体经济发展的思考与研究',
     description: "研究绿水青山向金山银山转化的实践路径，提出促进农村集体经济发展的策略建议",
     image: "/lovable-uploads/59417d34-5d7f-454f-9479-c80beea3fc3e.png"
   },
   {
     id: 3,
-    title: "聚焦"育管用"抓实抓细选调生培养管理",
-    description: "分析选调生培养管理体系的优化路径，提出"育管用"一体化培养模式的实践思考",
+    title: '聚焦"育管用"抓实抓细选调生培养管理',
+    description: '分析选调生培养管理体系的优化路径，提出"育管用"一体化培养模式的实践思考',
     image: "/lovable-uploads/6e75cd91-d379-4ca6-8beb-a7c3ec8a336d.png"
   }
 ];
