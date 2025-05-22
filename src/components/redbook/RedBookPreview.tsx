@@ -57,7 +57,7 @@ const RedBookPreview: React.FC<Props> = ({
             <div className="col-span-2 h-48 absolute right-0 -bottom-12 animate-float" style={{
             animationDelay: "1.5s"
           }}>
-              <img alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/3133b2cd-523e-4120-8453-37d1051f5beb.png" />
+              <img alt="九眼楼" className="h-full w-full object-cover rounded-lg shadow-lg" src="/lovable-uploads/9a27ad53-5c48-4e1e-9acb-63274d50e5d3.jpg" />
             </div>
             
             <div className="col-span-2 h-44 absolute -left-4 bottom-16 animate-float" style={{
