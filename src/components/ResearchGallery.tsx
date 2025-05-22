@@ -19,14 +19,14 @@ const researchData = [
   },
   {
     id: 2,
-    title: "两山转化助推农村集体经济发展",
-    description: "关于绿水青山就是金山银山理念在农村经济发展中的落实与实践研究",
+    title: ""两山"转化助推农村集体经济发展",
+    description: "关于"绿水青山就是金山银山"理念在农村经济发展中的落实与实践研究",
     image: "/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg"
   },
   {
     id: 3,
-    title: "育管用选调生培养管理",
-    description: "聚焦育才、管事、用人全链条，探索基层选调生培养与管理的有效机制",
+    title: ""育管用"选调生培养管理",
+    description: "聚焦"育才、管事、用人"全链条，探索基层选调生培养与管理的有效机制",
     image: "/lovable-uploads/c06e49bb-ff25-4276-9a4c-35b20236e53a.jpg"
   }
 ];
