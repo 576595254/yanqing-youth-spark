@@ -92,10 +92,10 @@ const EnterpriseResourceMatching = ({
         </div>
         <div className="p-6">
           <h3 className="text-lg font-bold text-gray-800 mb-3">企业资源对接会</h3>
-          <p className="text-gray-600 mb-4">通过搭建企业与基层的对接平台，促进资源共享与合作，为地方发展注入新活力。资源对接会聚集了各行业优质企业资源，助力延庆区域经济发展和产业升级。</p>
+          <p className="text-gray-600 mb-4">井庄镇选调生立足北京市“百千工程”建设要求，充分发挥自身优势，积极整合内外部资源，通过搭建资源推介平台、提供全流程服务保障、持续跟踪后期意向，推动本地特色资源与市场需求深度对接，为延庆区“醉美井庄”示范片区建设发展注入新动能。</p>
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-500">2024年3月</span>
-            <span className="text-orange-500 text-sm font-medium">50+ 企业参与</span>
+            
           </div>
         </div>
       </motion.div>
@@ -110,11 +110,11 @@ const EnterpriseResourceMatching = ({
             </li>
             <li className="flex items-start">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
-              <span className="text-gray-700">引入3000万元产业投资，助力当地经济发展</span>
+              <span className="text-gray-700">选调生们结合井庄镇特点及市场需求，制定个性化活动方案，碰撞合作火花</span>
             </li>
             <li className="flex items-start">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
-              <span className="text-gray-700">建立长效合作机制，确保资源持续对接</span>
+              <span className="text-gray-700">建立长效合作机制，持续跟踪回访，建立台账确保资源后续对接落地</span>
             </li>
           </ul>
         </div>
@@ -123,7 +123,7 @@ const EnterpriseResourceMatching = ({
           <h4 className="text-amber-600 font-medium mb-3">参与企业反馈</h4>
           <blockquote className="italic text-gray-700 border-l-2 border-amber-300 pl-4">
             "通过此次资源对接会，我们找到了理想的合作伙伴，为企业在延庆的发展打开了新局面。"
-            <footer className="text-sm text-gray-500 mt-2 not-italic">— 某科技企业负责人</footer>
+            <footer className="text-sm text-gray-500 mt-2 not-italic">— 某企业负责人</footer>
           </blockquote>
         </div>
       </motion.div>
