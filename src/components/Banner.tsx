@@ -35,8 +35,7 @@ const Banner = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
             <span className="block mb-2 text-shadow-lg">北京市延庆区</span>
-            <span className="text-amber-400 text-shadow-lg px-0 py-0 my-0 mx-0">选调生团队
-成果展示</span>
+            <span className="text-amber-400 text-shadow-lg px-0 py-0 my-0 mx-0">选调生团队成果展示</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 text-shadow-md max-w-2xl mx-auto">扎根基层 服务人民
