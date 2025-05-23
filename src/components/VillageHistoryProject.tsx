@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,36 +5,36 @@ import { cn } from "@/lib/utils";
 
 const villageData = [{
   id: 1,
-  name: "岔道古城",
-  period: "辽金时期",
-  image: "/lovable-uploads/3b6826c4-ff45-46e8-8849-4d5c4e491990.png",
-  description: "位于延庆西北部，是辽金时期重要军事要塞，出土陶瓷、兵器等文物，见证了延庆的边疆历史。",
-  coordinates: [115.9342, 40.5531],
-  discoveryDate: "2023-07-15"
+  name: "永宁古城遗址",
+  period: "明代",
+  image: "/lovable-uploads/7d931bb3-fe53-4aea-b6d1-6fa271fa1bc3.jpg",
+  description: "永宁古城遗址位于延庆区城东，为长城防御系统中的军事重镇。永宁古城目前仅存一段约300米的东城墙（现位于永宁古城北门口东侧）及西北角马面（现位于延庆·好物铸造厂北门口）、其他大部分已被拆。",
+  coordinates: [116.1723, 40.4982],
+  discoveryDate: "2023-05-12"
 }, {
   id: 2,
-  name: "慈母川村石碑群",
-  period: "明清时期",
-  image: "https://placeholder.pics/svg/400x300/DEDEDE/555555/慈母川村石碑群",
-  description: "位于慈母川村北侧山坡，保存有明清时期石碑10余块，记录了当地水利、赋税等历史信息。",
-  coordinates: [116.0123, 40.4982],
-  discoveryDate: "2023-09-22"
+  name: "上磨村黄龙潭",
+  period: "古代水源",
+  image: "/lovable-uploads/4c2ee652-3013-46ac-b1d5-8e0766f04be0.jpg",
+  description: "位于永宁镇上磨村。旧时，黄龙潭潭水如沸，外溢西流，与龙湾河汇合，形成延庆的母亲河，这是妫河的主要源头，上磨村又因早年黄龙潭上游水磨安装于此而得名。",
+  coordinates: [116.1456, 40.5123],
+  discoveryDate: "2023-08-20"
 }, {
   id: 3,
-  name: "古长城墩堡遗址",
-  period: "明代",
-  image: "https://placeholder.pics/svg/400x300/DEDEDE/555555/古长城墩堡遗址",
-  description: "延庆段明长城重要军事设施，发现烽火台、墩堡等遗址，为研究明代边防体系提供实物资料。",
-  coordinates: [115.8765, 40.5876],
-  discoveryDate: "2023-11-05"
+  name: "和平街火神庙",
+  period: "清末",
+  image: "/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg",
+  description: "位于永宁镇和平街村，始建于清末，是一座供奉道教火德真君的庙宇。殿内山墙绘有精美的壁画，生动地描绘出了古代战争的场景，并细致地描绘出了士兵们所使用的武器及用法。",
+  coordinates: [116.1598, 40.4876],
+  discoveryDate: "2023-10-15"
 }, {
   id: 4,
-  name: "张山营青铜器窖藏",
-  period: "西周",
-  image: "https://placeholder.pics/svg/400x300/DEDEDE/555555/张山营青铜器窖藏",
-  description: "2024年初在张山营镇发现的西周青铜器窖藏，出土鼎、簋等礼器，表明延庆地区在西周时期的重要地位。",
-  coordinates: [115.9876, 40.5123],
-  discoveryDate: "2024-01-18"
+  name: "永宁玉皇阁",
+  period: "明代",
+  image: "/lovable-uploads/c06e49bb-ff25-4276-9a4c-35b20236e53a.jpg",
+  description: "明成祖朱棣决定在永宁建县，明宣宗朱瞻基命令薛禄统兵到永宁，率领部下修筑城池。永宁城四边方正，城内布局严谨，城中央建有3层4面、高约20米的标志性建筑—玉皇阁，登临其上，可以俯视整座城池。",
+  coordinates: [116.1645, 40.4925],
+  discoveryDate: "2023-09-08"
 }];
 
 const treasureImages = [{
