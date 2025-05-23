@@ -7,34 +7,30 @@ const villageData = [{
   id: 1,
   name: "永宁古城遗址",
   period: "明代",
-  image: "/lovable-uploads/7d931bb3-fe53-4aea-b6d1-6fa271fa1bc3.jpg",
+  image: "/lovable-uploads/e03bdeb8-4864-4ac6-afe7-0884201c1485.png",
   description: "永宁古城遗址位于延庆区城东，为长城防御系统中的军事重镇。永宁古城目前仅存一段约300米的东城墙（现位于永宁古城北门口东侧）及西北角马面（现位于延庆·好物铸造厂北门口）、其他大部分已被拆。",
-  coordinates: [116.1723, 40.4982],
-  discoveryDate: "2023-05-12"
+  coordinates: [116.1723, 40.4982]
 }, {
   id: 2,
   name: "上磨村黄龙潭",
   period: "古代水源",
-  image: "/lovable-uploads/4c2ee652-3013-46ac-b1d5-8e0766f04be0.jpg",
+  image: "/lovable-uploads/6943bd7a-958b-4f93-9f13-8e34a923b7d9.png",
   description: "位于永宁镇上磨村。旧时，黄龙潭潭水如沸，外溢西流，与龙湾河汇合，形成延庆的母亲河，这是妫河的主要源头，上磨村又因早年黄龙潭上游水磨安装于此而得名。",
-  coordinates: [116.1456, 40.5123],
-  discoveryDate: "2023-08-20"
+  coordinates: [116.1456, 40.5123]
 }, {
   id: 3,
   name: "和平街火神庙",
   period: "清末",
-  image: "/lovable-uploads/95177ee8-a812-4aa3-9af2-0388dd6443b3.jpg",
+  image: "/lovable-uploads/3da854b6-3783-4d7a-8fab-9b13c9ca7f62.png",
   description: "位于永宁镇和平街村，始建于清末，是一座供奉道教火德真君的庙宇。殿内山墙绘有精美的壁画，生动地描绘出了古代战争的场景，并细致地描绘出了士兵们所使用的武器及用法。",
-  coordinates: [116.1598, 40.4876],
-  discoveryDate: "2023-10-15"
+  coordinates: [116.1598, 40.4876]
 }, {
   id: 4,
   name: "永宁玉皇阁",
   period: "明代",
-  image: "/lovable-uploads/c06e49bb-ff25-4276-9a4c-35b20236e53a.jpg",
+  image: "/lovable-uploads/27cd3c53-d66a-4c52-b519-9ef6185f6aae.png",
   description: "明成祖朱棣决定在永宁建县，明宣宗朱瞻基命令薛禄统兵到永宁，率领部下修筑城池。永宁城四边方正，城内布局严谨，城中央建有3层4面、高约20米的标志性建筑—玉皇阁，登临其上，可以俯视整座城池。",
-  coordinates: [116.1645, 40.4925],
-  discoveryDate: "2023-09-08"
+  coordinates: [116.1645, 40.4925]
 }];
 
 const treasureImages = [{
@@ -131,9 +127,6 @@ const VillageHistoryProject = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 mb-2">{location.description}</p>
-                      <div className="flex justify-between text-xs text-gray-500">
-                        <span>发现日期: {location.discoveryDate}</span>
-                      </div>
                     </div>
                   </div>)}
               </div>
