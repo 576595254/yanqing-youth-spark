@@ -7,14 +7,14 @@ const villageData = [{
   id: 1,
   name: "永宁古城遗址",
   period: "明代",
-  image: "/lovable-uploads/f10da036-718c-4def-91ee-06a6713666d9.jpg",
+  image: "/lovable-uploads/e03bdeb8-4864-4ac6-afe7-0884201c1485.png",
   description: "永宁古城遗址位于延庆区城东，为长城防御系统中的军事重镇。永宁古城目前仅存一段约300米的东城墙（现位于永宁古城北门口东侧）及西北角马面（现位于延庆·好物铸造厂北门口）、其他大部分已被拆。",
   coordinates: [116.1723, 40.4982]
 }, {
   id: 2,
   name: "上磨村黄龙潭",
   period: "古代水源",
-  image: "/lovable-uploads/6943bd7a-958b-4f93-9f13-8e34a923b7d9.png",
+  image: "/lovable-uploads/ec7552f7-417a-4f40-8f18-9057be5e042b.jpg",
   description: "位于永宁镇上磨村。旧时，黄龙潭潭水如沸，外溢西流，与龙湾河汇合，形成延庆的母亲河，这是妫河的主要源头，上磨村又因早年黄龙潭上游水磨安装于此而得名。",
   coordinates: [116.1456, 40.5123]
 }, {
