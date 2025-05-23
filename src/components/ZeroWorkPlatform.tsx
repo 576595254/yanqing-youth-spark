@@ -56,7 +56,7 @@ const ZeroWorkPlatform = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
           <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
-            <img alt="零用工平台Logo" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" src="/lovable-uploads/891d6bbe-0b48-4bf8-b2c1-791cbfa8b1da.jpg" />
+            <img alt="零用工平台Logo" className="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500" src="/lovable-uploads/f10da036-718c-4def-91ee-06a6713666d9.jpg" />
           </div>
         </div>
         

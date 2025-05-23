@@ -7,7 +7,7 @@ const villageData = [{
   id: 1,
   name: "永宁古城遗址",
   period: "明代",
-  image: "/lovable-uploads/e03bdeb8-4864-4ac6-afe7-0884201c1485.png",
+  image: "/lovable-uploads/f10da036-718c-4def-91ee-06a6713666d9.jpg",
   description: "永宁古城遗址位于延庆区城东，为长城防御系统中的军事重镇。永宁古城目前仅存一段约300米的东城墙（现位于永宁古城北门口东侧）及西北角马面（现位于延庆·好物铸造厂北门口）、其他大部分已被拆。",
   coordinates: [116.1723, 40.4982]
 }, {
