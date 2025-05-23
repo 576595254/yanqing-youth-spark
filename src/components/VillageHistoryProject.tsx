@@ -14,14 +14,14 @@ const villageData = [{
   id: 2,
   name: "上磨村黄龙潭",
   period: "古代水源",
-  image: "/lovable-uploads/6943bd7a-958b-4f93-9f13-8e34a923b7d9.png",
+  image: "/lovable-uploads/ec7552f7-417a-4f40-8f18-9057be5e042b.jpg",
   description: "位于永宁镇上磨村。旧时，黄龙潭潭水如沸，外溢西流，与龙湾河汇合，形成延庆的母亲河，这是妫河的主要源头，上磨村又因早年黄龙潭上游水磨安装于此而得名。",
   coordinates: [116.1456, 40.5123]
 }, {
   id: 3,
   name: "和平街火神庙",
   period: "清末",
-  image: "/lovable-uploads/3da854b6-3783-4d7a-8fab-9b13c9ca7f62.png",
+  image: "/lovable-uploads/9e709883-6aaa-484c-b1ce-ad5913dc349e.jpg",
   description: "位于永宁镇和平街村，始建于清末，是一座供奉道教火德真君的庙宇。殿内山墙绘有精美的壁画，生动地描绘出了古代战争的场景，并细致地描绘出了士兵们所使用的武器及用法。",
   coordinates: [116.1598, 40.4876]
 }, {
