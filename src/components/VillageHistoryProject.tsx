@@ -7,7 +7,7 @@ const villageData = [{
   id: 1,
   name: "永宁古城遗址",
   period: "明代",
-  image: "/lovable-uploads/e03bdeb8-4864-4ac6-afe7-0884201c1485.png",
+  image: "/lovable-uploads/f10da036-718c-4def-91ee-06a6713666d9.jpg",
   description: "永宁古城遗址位于延庆区城东，为长城防御系统中的军事重镇。永宁古城目前仅存一段约300米的东城墙（现位于永宁古城北门口东侧）及西北角马面（现位于延庆·好物铸造厂北门口）、其他大部分已被拆。",
   coordinates: [116.1723, 40.4982]
 }, {
@@ -21,14 +21,14 @@ const villageData = [{
   id: 3,
   name: "和平街火神庙",
   period: "清末",
-  image: "/lovable-uploads/9e709883-6aaa-484c-b1ce-ad5913dc349e.jpg",
+  image: "/lovable-uploads/3da854b6-3783-4d7a-8fab-9b13c9ca7f62.png",
   description: "位于永宁镇和平街村，始建于清末，是一座供奉道教火德真君的庙宇。殿内山墙绘有精美的壁画，生动地描绘出了古代战争的场景，并细致地描绘出了士兵们所使用的武器及用法。",
   coordinates: [116.1598, 40.4876]
 }, {
   id: 4,
   name: "永宁玉皇阁",
   period: "明代",
-  image: "/lovable-uploads/27cd3c53-d66a-4c52-b519-9ef6185f6aae.png",
+  image: "/lovable-uploads/5196f15f-6f16-43ab-bb8b-b1f31c1df081.jpg",
   description: "明成祖朱棣决定在永宁建县，明宣宗朱瞻基命令薛禄统兵到永宁，率领部下修筑城池。永宁城四边方正，城内布局严谨，城中央建有3层4面、高约20米的标志性建筑—玉皇阁，登临其上，可以俯视整座城池。",
   coordinates: [116.1645, 40.4925]
 }];
